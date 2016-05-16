@@ -1,12 +1,31 @@
 body {
+	font-family: 'PT Sans', sans-serif;
 }
+
+#rest-of-page {
+	background-color: white;
+	z-index: 1;
+	position: absolute;
+	top: 100%;
+	padding-top: 30px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.about-njagala-section {
+	margin: 0px 200px;
+}
+
+/*----------------- Start -----------------*/
 
 .navigation-bar-wrapper {
 	position: fixed;
 	width: 100%;
 	height: 75px;
+	border-bottom: 2px solid #fff; /* text-color */
 	background-color: #555; /* bg-color */
-	border-bottom: 2px solid white;
 }
 
 .image-container {
@@ -141,11 +160,21 @@ img#burger-image {
 	visibility: hidden;
 }
 
+@media only screen and (max-width: 1050px) {
+	img#burger-image {
+		visibility: visible;
+	}
+
+	nav {
+		visibility: hidden;
+	}
+}
+
 /* -------------------- BURGER MENU -------------------- */
 
 .burger-menu {
 	z-index: 9;
-	background-color: #555;
+	background-color: #555; /* bg-color */
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -159,7 +188,7 @@ img#burger-image {
 
 .burger-menu-head {
 	height: 75px;
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid #fff; /* text-color */
 }
 
 .burger-back-arrow {
@@ -172,7 +201,7 @@ img#burger-image {
 }
 
 .burger-menu-subtext {
-	color: #fff;
+	color: #fff; /* text-color */
 	text-align: center;
 
 	display: table-row;
@@ -189,7 +218,7 @@ img#burger-image {
 	max-width: 80%;
 	list-style: none;
 	text-align: right;
-	color: #fff;
+	color: #fff; /* text-color */
 	padding: 20px 0;
 	margin: 0;
 	font-size: 30px;
@@ -198,13 +227,30 @@ img#burger-image {
 
 .burger-nav a {
 	text-decoration: none;
-	color: #fff;
+	color: #fff; /* text-color */
 }
 
 .burger-nav li ul {
 	margin: 0;
 	padding: 0;
 	display: none;
+}
+
+@media only screen and (max-height: 580px) {
+	.burger-nav li {
+		font-size: 20px;
+		padding: 15px 0;
+		min-width: 133px;
+	}
+	.burger-menu {
+		width: 200px;
+	}
+}
+
+@media only screen and (max-height: 580px) and (max-width: 600px) {
+	.burger-menu {
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -225,37 +271,9 @@ img#burger-image {
 	}
 }
 
-@media only screen and (max-height: 580px) {
-	.burger-nav li {
-		font-size: 20px;
-		padding: 15px 0;
-		min-width: 133px;
-	}
-	.burger-menu {
-		width: 200px;
-	}
-}
-
-@media only screen and (max-height: 580px) and (max-width: 600px) {
-	.burger-menu {
-		width: 100%;
-	}
-}
-
 @media only screen and (max-height: 525px) {
 	.burger-nav li {
 		font-size: 15px;
 		padding: 10px 0;
-	}
-}
-
-@media only screen and (max-width: 1050px) {
-
-	img#burger-image {
-		visibility: visible;
-	}
-
-	nav {
-		visibility: hidden;
 	}
 }

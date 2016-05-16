@@ -13,76 +13,96 @@
   <script src="frameworks/js/jquery-2.2.3.min.js"></script>
   <script src="frameworks/jquery.backstretch.min.js"></script>
   <script src="frameworks/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <!-- custom stuff -->
   <link rel="stylesheet" type="text/css" href="style/styles.css">
   <script src="script/script.js"></script>
 </head>
 
 <body>
+  <!-- prevent scrolling (for now) -->
   <script>
     $(document).bind('touchmove', function(e) {
-    	e.preventDefault();
+    	// e.preventDefault();
     });
   </script>
-  <div class="navigation-bar-wrapper">
-  <header>
-    <div id="logo">
-      <h1 id="title">N J A G A L A</h1>
-    </div>
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.htm">Das Projekt</a></li>
-        <li><a href="index.htm">Aktuelles</a></li>
-        <li><a href="index.htm">Funding</a></li>
-        <li><a href="index.htm">Das Produkt</a></li>
-        <li><a href="index.htm">Über Uns</a>
-          <ul>
-            <li><a href="index.htm">Das Team</a></li>
-            <li><a href="index.htm">Unsere Partner</a></li>
-          </ul>
-        </li>
-        <li><a href="index.htm">Kontakt</a></li>
-      </ul>
-    </nav>
 
-    <img id="burger-image" src="images/burger.png" alt="menu" />
-    <script>
-      $(document).ready(function(){
-        $('#burger-image').click(function() {
-          $(".burger-menu").show(500);
+  <!-- Navigation Bar -->
+   <div class="navigation-bar-wrapper background-color">
+    <header>
+      <div id="logo">
+        <h1 id="title">N J A G A L A</h1>
+      </div>
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.htm">Das Projekt</a></li>
+          <li><a href="index.htm">Aktuelles</a></li>
+          <li><a href="index.htm">Funding</a></li>
+          <li><a href="index.htm">Das Produkt</a></li>
+          <li><a href="index.htm">Über Uns</a>
+            <ul>
+              <li><a href="index.htm">Das Team</a></li>
+              <li><a href="index.htm">Unsere Partner</a></li>
+            </ul>
+          </li>
+          <li><a href="index.htm">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <img id="burger-image" src="images/burger.png" alt="menu" />
+
+      <script>
+        $(document).ready(function(){
+          $('#burger-image').click(function() {
+            //show burger menu on click
+            $(".burger-menu").show(500);
+          });
+          $(window).resize(function() {
+            if ($(window).width() > 1050) {
+              //hide burger menu if active and navbar turns
+              //visible because window width changed
+               $(".burger-menu").hide(0);
+            }
+          });
         });
-      });
-    </script>
-  </header>
-</div>
+      </script>
+
+    </header>
+  </div>
+
+  <!-- Landing Page Background Image -->
   <div class="image-container">
     <script>
       $(".image-container").backstretch("images/background.jpeg");
     </script>
+    <img id="image-text" src="images/text.svg">
+    <img id="down-arrow" src="images/down_arrow.png">
   </div>
 
-  <section id="start">
-      <img id="image-text" src="images/text.svg">
-      <img id="down-arrow" src="images/down_arrow.png">
-  </section>
-
-  <div class="burger-menu hty">
+  <!-- Burger Menu for smaller devices -->
+  <div class="burger-menu">
     <script>
-    $(document).ready(function(){
+      $(document).ready(function(){
+        //hide as default
         $(".burger-menu").hide(0);
-    });
+      });
     </script>
-    <div class="burger-menu-head hty">
-      <img src="images/back-arrow.png" class="burger-back-arrow hty">
+
+    <!-- back arrow -->
+    <div class="burger-menu-head">
+      <img src="images/back-arrow.png" class="burger-back-arrow">
       <script>
         $(document).ready(function(){
           $('.burger-back-arrow').click(function() {
+            //hide when back button was clicked
             $(".burger-menu").hide(500);
           });
         });
       </script>
     </div>
-    <ul class="burger-nav hty">
+
+    <!-- burger menu content -->
+    <ul class="burger-nav">
       <li><a href="index.htm">Das Projekt</a></li>
       <li><a href="index.htm">Aktuelles</a></li>
       <li><a href="index.htm">Funding</a></li>
@@ -95,7 +115,26 @@
       </li>
       <li><a href="index.htm">Kontakt</a></li>
     </ul>
-    <p class="burger-menu-subtext hty">© Njagala 2016</p>
+    <p class="burger-menu-subtext">© Njagala 2016</p>
+
+  </div>
+
+  <div id="rest-of-page">
+    <div class="container full-width">
+      <div class="row about-njgala-section">
+        <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-1">
+          <p>
+            <h1>Lorem Ipsum, dolor, sit amet.</h1>
+          </p>
+        </div>
+        <div class="col-xs-10 col-sm-5 col-md-6 col-xs-offset-1">
+          <p>
+            <h2>Wir sind Njagala.</h2>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
