@@ -169,12 +169,12 @@ img#burger-image {
 	position: fixed;
 	right: 6%;
 	top: 19px;
-	visibility: hidden;
+	display: none;
 }
 
 @media only screen and (max-width: 1050px) {
 	img#burger-image {
-		visibility: visible;
+		display: block;
 	}
 
 	nav {
@@ -185,7 +185,7 @@ img#burger-image {
 /* -------------------- BURGER MENU -------------------- */
 
 .burger-menu {
-	z-index: 9;
+	z-index: 9999;
 	background-color: #555; /* bg-color */
 	position: fixed;
 	top: 0;
@@ -210,6 +210,7 @@ img#burger-image {
 	position: absolute;
 	right: 10%;
 	top: 19px;
+	z-index: 9999;
 }
 
 .burger-menu-subtext {

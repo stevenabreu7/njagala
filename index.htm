@@ -20,12 +20,6 @@
 </head>
 
 <body>
-  <!-- prevent scrolling (for now) -->
-  <script>
-    $(document).bind('touchmove', function(e) {
-    	// e.preventDefault();
-    });
-  </script>
 
   <!-- Navigation Bar -->
    <div class="navigation-bar-wrapper">
@@ -53,54 +47,22 @@
 
       <img id="burger-image" src="images/burger.png" alt="menu" />
 
-      <script>
-        $(document).ready(function(){
-          $('#burger-image').click(function() {
-            //show burger menu on click
-            $(".burger-menu").show(500);
-          });
-          $(window).resize(function() {
-            if ($(window).width() > 1050) {
-              //hide burger menu if active and navbar turns
-              //visible because window width changed
-               $(".burger-menu").hide(0);
-            }
-          });
-        });
-      </script>
-
     </header>
   </div>
 
   <!-- Landing Page Background Image -->
   <div class="image-container">
-    <script>
-      $(".image-container").backstretch("images/background.jpeg");
-    </script>
+    <script>$(".image-container").backstretch("images/background.jpeg");</script>
     <img id="image-text" src="images/text.svg">
     <img id="down-arrow" src="images/down_arrow.png">
   </div>
 
   <!-- Burger Menu for smaller devices -->
   <div class="burger-menu">
-    <script>
-      $(document).ready(function(){
-        //hide as default
-        $(".burger-menu").hide(0);
-      });
-    </script>
 
     <!-- back arrow -->
     <div class="burger-menu-head">
-      <img src="images/back-arrow.png" class="burger-back-arrow">
-      <script>
-        $(document).ready(function(){
-          $('.burger-back-arrow').click(function() {
-            //hide when back button was clicked
-            $(".burger-menu").hide(500);
-          });
-        });
-      </script>
+      <img id="back-arrow" src="images/back-arrow.png" class="burger-back-arrow">
     </div>
 
     <!-- burger menu content -->
