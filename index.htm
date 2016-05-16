@@ -19,6 +19,11 @@
 </head>
 
 <body>
+  <script>
+    $(document).bind('touchmove', function(e) {
+    	e.preventDefault();
+    });
+  </script>
   <div class="navigation-bar-wrapper">
   <header>
     <div id="logo">
@@ -44,9 +49,7 @@
     <script>
       $(document).ready(function(){
         $('#burger-image').click(function() {
-          $(".burger-menu").animate({
-            right: '0px'
-          });
+          $(".burger-menu").show(500);
         });
       });
     </script>
@@ -64,14 +67,17 @@
   </section>
 
   <div class="burger-menu hty">
+    <script>
+    $(document).ready(function(){
+        $(".burger-menu").hide(0);
+    });
+    </script>
     <div class="burger-menu-head hty">
       <img src="images/back-arrow.png" class="burger-back-arrow hty">
       <script>
         $(document).ready(function(){
           $('.burger-back-arrow').click(function() {
-            $(".burger-menu").animate({
-              right: '-100%'
-            });
+            $(".burger-menu").hide(500);
           });
         });
       </script>

@@ -148,7 +148,7 @@ img#burger-image {
 	background-color: #555;
 	position: fixed;
 	top: 0;
-	right: -100%;
+	right: 0;
 	height: 100%;
 	width: 300px;
 
@@ -252,10 +252,6 @@ img#burger-image {
 @media only screen and (max-width: 1050px) {
 
 	img#burger-image {
-		visibility: visible;
-	}
-
-	.burger-menu {
 		visibility: visible;
 	}
 
