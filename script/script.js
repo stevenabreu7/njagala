@@ -5,35 +5,37 @@ $(document).ready(function() {
   //     console.log(text);
   // });
 
+  var burgerMenuActive = false;
+
   //hide burger-menu as default
   $(".burger-menu").hide(0);
 
   //hide burger menu if active and navbar turns
   //visible because window width changed
   $(window).resize(function() {
-    if ($(window).width() > 1050) {
-       $(".burger-menu").hide(0);
-       $('#burger-image').show(0);
+    if ($(window).width() > 1050 && burgerMenuActive) {
+      $(".burger-menu").hide(0);
+      burgerMenuActive = false;
     }
   });
 
   //show burger menu on click
   $('#burger-image').click(function() {
     $(".burger-menu").show(500);
-    $('#burger-image').hide(0);
+    burgerMenuActive = true;
   });
 
   //hide when back button was clicked
   $('#back-arrow').click(function() {
     $(".burger-menu").hide(500);
-    $('#burger-image').show(0);
+    burgerMenuActive = false;
   });
 
 
   // --------------- other ---------------
 
   //scroll down when down-arrow is clicked
-  $("#down-arrow").click(function(){
+  $("#down-arrow, .project-link").click(function(){
     var scrollToThis = $('#rest-of-page').offset().top - $('.navigation-bar-wrapper').height();
     $('html, body').animate({
       scrollTop: scrollToThis

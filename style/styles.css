@@ -111,6 +111,10 @@ nav {
 	height: 50px;
 }
 
+.project-link {
+	cursor: pointer;
+}
+
 .navbar li {
 	float: left;
 	list-style: none;
