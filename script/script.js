@@ -35,11 +35,23 @@ $(document).ready(function() {
   // --------------- other ---------------
 
   //scroll down when down-arrow is clicked
-  $("#down-arrow, .project-link").click(function(){
+  $("#down-arrow").click(function(){
     var scrollToThis = $('#rest-of-page').offset().top - $('.navigation-bar-wrapper').height();
     $('html, body').animate({
       scrollTop: scrollToThis
     }, 2000);
+  });
+
+  $(".project-link").click(function(){
+    var scrollToThis = $('#rest-of-page').offset().top - $('.navigation-bar-wrapper').height();
+
+    $(".burger-menu").hide(500);
+    burgerMenuActive = false;
+
+    $('html, body').animate({
+      scrollTop: scrollToThis
+    }, 2000);
+
   });
 
   //change navbar style when scrolling
