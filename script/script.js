@@ -121,6 +121,21 @@ $(document).ready(function() {
 
   });
 
+  //scroll down when home link is clicked
+  $(".home-link").click(function(){
+    var scrollToThis = 0;
+    var totalToScroll = $(window).scrollTop();
+    var duration = Math.abs(totalToScroll / scrollSpeed);
+
+    $(".burger-menu").hide(burgerAnimation);
+    burgerMenuActive = false;
+
+    $('html, body').animate({
+      scrollTop: scrollToThis
+    }, duration);
+
+  });
+
   //scroll function!
   var opac = 0.0;
   $(window).scroll(function(){
@@ -133,9 +148,7 @@ $(document).ready(function() {
     var fifthSection = $('.contact-section').offset().top - $('.navigation-bar-wrapper').height();
     var scrollPosition = $(window).scrollTop();
 
-    if (scrollPosition >= 87129837812) {
-      //do nothing
-    } else if (scrollPosition >= fifthSection) {
+    if (scrollPosition >= fifthSection) {
       $(".funding-link").css("text-decoration", "none");
       $(".project-link").css("text-decoration", "none");
       $(".about-us-link").css("text-decoration", "none");
@@ -171,7 +184,7 @@ $(document).ready(function() {
       //show relevant one
       $(".project-link").css("text-decoration", "underline");
     } else {
-      //dont underline any
+      //underline none
       $(".funding-link").css("text-decoration", "none");
       $(".project-link").css("text-decoration", "none");
       $(".about-us-link").css("text-decoration", "none");
