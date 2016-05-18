@@ -2,13 +2,31 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
+hr {
+	width: 80%;
+}
+
+p {
+	overflow: hidden;
+}
+
+.pad {
+	padding: 0px 20px;
+}
+
+#about-header {
+	text-align: center;
+	width: 100%;
+	color: #555;
+}
+
 #rest-of-page {
 	background-color: white;
 	z-index: 0;
 	position: absolute;
 	top: 100%;
-	padding-top: 50px;
-	padding-bottom: 500px;
+	padding-top: 10px;
+	padding-bottom: 50px;
 }
 
 .full-width {
@@ -167,7 +185,6 @@ nav {
 }
 
 img#burger-image {
-	float: right;
 	height: 32px;
 	width: 32px;
 	position: fixed;
@@ -210,9 +227,8 @@ img#burger-image {
 .burger-back-arrow {
 	height: 32px;
 	width: 32px;
-	float: right;
-	position: absolute;
-	right: 10%;
+	position: fixed;
+	right: 6%;
 	top: 19px;
 	z-index: 9999;
 }
