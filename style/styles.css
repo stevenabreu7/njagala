@@ -2,19 +2,39 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
-hr {
+.avatart, .avatarb {
 	width: 80%;
+	padding-top: 20px;
 }
 
-p {
-	overflow: hidden;
+.avatarb {
+	padding-bottom: 20px;
+}
+
+.about-us-section, .product-section {
+	background-color: #eee;
+	padding-top: 10px;
+}
+
+footer {
+	width: 100%;
+	background-color: #888;
+	padding-top: 20px;
+}
+
+hr {
+	width: 80%;
 }
 
 .pad {
 	padding: 0px 20px;
 }
 
-#about-header {
+.row {
+	padding-bottom: 30px;
+}
+
+#about-header, #funding-header, #product-header, #contact-header, #footer-header {
 	text-align: center;
 	width: 100%;
 	color: #555;
@@ -26,15 +46,10 @@ p {
 	position: absolute;
 	top: 100%;
 	padding-top: 10px;
-	padding-bottom: 50px;
 }
 
 .full-width {
 	width: 100%;
-}
-
-.about-njagala-section {
-	margin: 0px 200px;
 }
 
 /*----------------- Start -----------------*/
@@ -129,7 +144,7 @@ nav {
 	height: 50px;
 }
 
-.project-link {
+.nav-link {
 	cursor: pointer;
 }
 
