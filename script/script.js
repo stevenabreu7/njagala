@@ -5,7 +5,7 @@ $(document).ready(function() {
   //     console.log(text);
   // });
 
-  var scrollSpeed = 1.0; // => px/ms
+  var scrollSpeed = 0.7; // => px/ms
   var navAnimation = 500; //animation opacity
   var burgerAnimation = 200; //hide and show burger menu
 
