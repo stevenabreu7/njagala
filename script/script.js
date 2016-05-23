@@ -29,28 +29,14 @@ $(document).ready(function() {
     burgerMenuActive = true;
   });
 
-  var clickCounter = 0;
+  var clickCounter = 1;
   $('header').click(function(){
-    if (clickCounter == 0) {
-      $('.navbar-bg-image').attr('src','images/bark-cloth.png');
-      $(".navigation-bar-background").css("background-color", "transparent");
-      $('.navbar-bg-image').css('visibility','visible');
-      clickCounter++;
-    } else if (clickCounter == 1) {
-      $(".navigation-bar-background").css("background-color", "#888");
-      $('.navbar-bg-image').attr('src','none');
-      $('.navbar-bg-image').css('visibility','hidden');
-      clickCounter++;
-    } else if (clickCounter == 2) {
-      $(".navigation-bar-background").css("background-color", "#bbb");
-      $('.navbar-bg-image').attr('src','none');
-      $('.navbar-bg-image').css('visibility','hidden');
+    if (clickCounter == 1) {
+      $('.navbar-bg-image').attr('src','images/barkkcloth.png');
       clickCounter++;
     } else {
-      $('.navbar-bg-image').attr('src','images/bark_cloth.png');
-      $(".navigation-bar-background").css("background-color", "transparent");
-      $('.navbar-bg-image').css('visibility','visible');
-      clickCounter = 0;
+      $('.navbar-bg-image').attr('src','images/barkcloth.png');
+      clickCounter = 1;
     }
   });
 
