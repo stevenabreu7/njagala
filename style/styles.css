@@ -147,9 +147,9 @@ header {
 	clear: both;
 }
 
-h1#title {
+#title {
 	display: inline;
-	color: #fff; /* text-color */
+	width: 200px;
 }
 
 /* -------------------- NAVIGATION BAR-------------------- */
