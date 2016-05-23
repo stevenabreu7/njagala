@@ -31,12 +31,12 @@ $(document).ready(function() {
 
   var clickCounter = 1;
   $('header').click(function(){
-    if (clickCounter == 1) {
+    if (clickCounter != 1) {
       $('.navbar-bg-image').attr('src','images/barkkcloth.png');
-      clickCounter++;
+      clickCounter = 1;
     } else {
       $('.navbar-bg-image').attr('src','images/barkcloth.png');
-      clickCounter = 1;
+      clickCounter++;
     }
   });
 
@@ -210,7 +210,7 @@ $(document).ready(function() {
     if (scrollPos >= firstSec - 100 && scrollPos < firstSec + 0) {
       var opacityToSet = ((scrollPos - firstSec + 100)/100);
       $('.navigation-bar-background').css('opacity', opacityToSet);
-      $('.nested-list-item').css({ 'background-image': 'url(images/bark_cloth.png)' });
+      $('.nested-list-item').css({ 'background-image': 'url(images/barkkcloth.png)' });
     } else if (scrollPos > firstSec + 100) {
       $('.navigation-bar-background').css('opacity', '1.0');
       // $('.navigation-bar-background').css('background-color', '#777');
