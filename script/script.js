@@ -29,6 +29,14 @@ $(document).ready(function() {
     burgerMenuActive = true;
   });
 
+  $('header').click(function(){
+    if ($(".navbar-bg-image").attr("src") == "images/bark_cloth.png"){
+      $('.navbar-bg-image').attr('src','images/bark-cloth.png');
+    } else {
+      $('.navbar-bg-image').attr('src','images/bark_cloth.png');
+    }
+  });
+
   //hide when back button was clicked
   $('#back-arrow').click(function() {
     $(".burger-menu").hide(burgerAnimation);
@@ -199,12 +207,14 @@ $(document).ready(function() {
     if (scrollPos >= firstSec - 100 && scrollPos < firstSec + 0) {
       var opacityToSet = ((scrollPos - firstSec + 100)/100);
       $('.navigation-bar-background').css('opacity', opacityToSet);
+      $('.nested-list-item').css({ 'background-image': 'url(images/bark_cloth.png)' });
     } else if (scrollPos > firstSec + 100) {
       $('.navigation-bar-background').css('opacity', '1.0');
-      $('.nested-list-item').css({ 'background-color': '#555', 'border-bottom' : 'none' });
+      // $('.nested-list-item').css({ 'background-color': '#555', 'border-bottom' : 'none' });
     } else if (scrollPos < firstSec) {
       $('.navigation-bar-background').css('opacity', '0.0');
-      $('.nested-list-item').css({ 'background-color': 'transparent', 'border-bottom' : '2px solid white' });
+      // $('.nested-list-item').css({ 'background-color': 'transparent', 'border-bottom' : '2px solid white' });
+      $('.nested-list-item').css({ 'background': 'none'});
     }
   });
 });

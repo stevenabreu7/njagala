@@ -72,6 +72,14 @@ hr {
 	border-bottom: 2px solid #fff; /* text-color */
 }
 
+.navbar-bg-image {
+	height: 100%;
+	min-width: 100%;
+	width: 1050px;
+	position: absolute;
+	top: 0px;
+}
+
 .image-container {
 	z-index: -10;
 	height: 100%;
@@ -110,6 +118,7 @@ img#down-arrow {
 	left: 50%;
 	margin-left: -50px;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 header {
@@ -187,7 +196,7 @@ nav {
 }
 
 .navbar li:hover ul li:first-of-type {
-	padding-top: 32px;
+	margin-top: 24px;
 	border-left: 2px solid #fff; /* text-color */
 }
 
