@@ -40,7 +40,7 @@ hr {
 	color: #555;
 }
 
-#rest-of-page {
+.rest-of-page {
 	background-color: white;
 	z-index: 0;
 	position: absolute;
@@ -117,7 +117,7 @@ img#image-text {
 	}
 }
 
-img#down-arrow {
+img.down-arrow {
 	max-width: 100px;
 	height: auto;
 	position: absolute;
