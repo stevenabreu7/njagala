@@ -11,14 +11,6 @@ $(document).ready(function() {
 
   //plugins
   jQuery.fn.extend({
-    noDeco: function () {
-      $(this).css("text-decoration", "none");
-    },
-
-    yesDeco: function () {
-      $(this).css("text-decoration", "underline");
-    },
-
     scrollTo: function(scrollToThis) {
       var totalToScroll = scrollToThis - $(window).scrollTop();
       var duration = Math.abs(totalToScroll / scrollSpeed);
@@ -90,34 +82,6 @@ $(document).ready(function() {
 
   //scroll function!
   $(window).scroll(function(){
-
-    //underline active section
-    var scrollPosition = $(window).scrollTop();
-    var firstSection = $('.about-njagala-section').offset().top - $('.navigation-bar-wrapper').height();
-    var secondSection = $('.about-us-section').offset().top - $('.navigation-bar-wrapper').height();
-    var thirdSection = $('.funding-section').offset().top - $('.navigation-bar-wrapper').height();
-    var fourthSection = $('.product-section').offset().top - $('.navigation-bar-wrapper').height();
-    var fifthSection = $('.contact-section').offset().top - $('.navigation-bar-wrapper').height();
-    var allLinks = ".funding-link, .project-link, .about-us-link, .product-link, .contact-link";
-
-    if (scrollPosition < firstSection) {
-      $(allLinks).noDeco();
-    } else if (scrollPosition >= fifthSection) {
-      $(allLinks).noDeco();
-      $(".contact-link").yesDeco();
-    } else if (scrollPosition >= fourthSection) {
-      $(allLinks).noDeco();
-      $('.product-link').yesDeco();
-    } else if (scrollPosition >= thirdSection) {
-      $(allLinks).noDeco();
-      $(".funding-link").yesDeco();
-    } else if (scrollPosition >= secondSection) {
-      $(allLinks).noDeco();
-      $(".about-us-link").yesDeco();
-    } else if (scrollPosition >= firstSection) {
-      $(allLinks).noDeco();
-      $(".project-link").yesDeco();
-    }
 
     //change navbar style when scrolling
     var firstSec = $('.rest-of-page').offset().top - $('.navigation-bar-wrapper').height();
