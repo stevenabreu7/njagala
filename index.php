@@ -266,12 +266,12 @@
         <p style='font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
       	font-size: 16px;'>You will be notified when we start shipping our first T-Shirts!</p>
         <p style='font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
-      	font-size: 10px;'>If you received this E-Mail by accident: too bad, you will get the notification anyway.</p>";
+      	font-size: 10px;'>This E-Mail was sent to " . $address . ". If you received this E-Mail by accident: too bad, you will get the notification anyway.</p>";
         $mail->AltBody = "Thank you for subscribing! \n You will be notified when we start shipping our first T-Shirts! \n
-          If you received this E-Mail by accident: too bad, you will get the notification anyway.";
+          This E-Mail was sent to " . $address . ". If you received this E-Mail by accident: too bad, you will get the notification anyway.";
         $mail->AddAddress($address);
         // $mail->AddCC("steven.abreu@arconsis.com");
-        // $mail->AddBCC("steven.abreu@kit.enactus.de");
+        $mail->AddBCC("steven.abreu@kit.enactus.de");
         $mail->AddReplyTo("info@njagala.com");
 
         if ($mail->Send()) {
