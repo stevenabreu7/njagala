@@ -22,36 +22,6 @@
 </head>
 
 <body>
-  <?php
-    if (isset($_POST['email'])){
-      // header("Location: http://www.njagala.com/");
-      $servername = "localhost";
-      $username = "d0227345";
-      $password = "cwb6pcGfnS8XWAMP";
-      $dbname = "d0227345";
-
-      $address = $_POST["email"];
-
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      // Check connection
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
-
-      $sql = "INSERT INTO emails VALUES ('$address')";
-
-      if ($conn->query($sql) === TRUE) {
-        // echo "New record created successfully";
-        // exit();
-        echo '<script type="text/javascript">' , 'showSuccess();' , '</script>';
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-      }
-
-      $conn->close();
-    }
-  ?>
   <!-- Navigation Bar -->
    <div class="navigation-bar-wrapper">
      <div class="navigation-bar-background">
@@ -263,5 +233,56 @@
       </div>
     </footer>
   </div>
+  <?php
+    if (isset($_POST['email'])){
+      // header("Location: http://www.njagala.com/");
+      $servername = "localhost";
+      $username = "d0227345";
+      $password = "cwb6pcGfnS8XWAMP";
+      $dbname = "d0227345";
+
+      $address = $_POST["email"];
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
+      $sql = "INSERT INTO emails VALUES ('$address')";
+
+      if ($conn->query($sql) === TRUE) {
+        // echo "New record created successfully";
+        // exit();
+        include("phpmailer/class.phpmailer.php");
+
+        $mail = new PHPMailer();
+        $mail->From = "bot@njagala.com";
+        $mail->FromName = "Njagala";
+        $mail->Subject = "Notification Service";
+        $mail->Body = "<h2 style='font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+      	font-size: 24px;'>Thank you for subscribing!</h2>
+        <p style='font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+      	font-size: 16px;'>You will be notified when we start shipping our first T-Shirts!</p>
+        <p style='font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+      	font-size: 10px;'>If you received this E-Mail by accident: too bad, you will get the notification anyway.</p>";
+        $mail->AltBody = "Thank you for subscribing! \n You will be notified when we start shipping our first T-Shirts! \n
+          If you received this E-Mail by accident: too bad, you will get the notification anyway.";
+        $mail->AddAddress($address);
+        // $mail->AddCC("steven.abreu@arconsis.com");
+        // $mail->AddBCC("steven.abreu@kit.enactus.de");
+        $mail->AddReplyTo("info@njagala.com");
+
+        if ($mail->Send()) {
+          echo '<script type="text/javascript">' , 'showSuccess();' , '</script>';
+        }
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
+      $conn->close();
+    }
+  ?>
 </body>
 </html>

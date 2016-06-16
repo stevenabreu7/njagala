@@ -28,6 +28,7 @@ function checkForm()
 
 function showSuccess()
 {
+  $('#emailbox').hide(0);
   swal({
     title: "Perfekt!",
     text: "Sie werden nun per E-Mail benachrichtigt, sobald wir loslegen.",
