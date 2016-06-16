@@ -14,13 +14,44 @@
   <script src="frameworks/jquery.backstretch.min.js"></script>
   <script src="frameworks/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <script src="frameworks/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="frameworks/sweetalert/dist/sweetalert.css">
   <!-- custom stuff -->
   <link rel="stylesheet" type="text/css" href="style/styles.css">
   <script src="script/script.js"></script>
 </head>
 
 <body>
+  <?php
+    if (isset($_POST['email'])){
+      // header("Location: http://www.njagala.com/");
+      $servername = "localhost";
+      $username = "d0227345";
+      $password = "cwb6pcGfnS8XWAMP";
+      $dbname = "d0227345";
 
+      $address = $_POST["email"];
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
+      $sql = "INSERT INTO emails VALUES ('$address')";
+
+      if ($conn->query($sql) === TRUE) {
+        // echo "New record created successfully";
+        // exit();
+        echo '<script type="text/javascript">' , 'showSuccess();' , '</script>';
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
+      $conn->close();
+    }
+  ?>
   <!-- Navigation Bar -->
    <div class="navigation-bar-wrapper">
      <div class="navigation-bar-background">
@@ -33,8 +64,8 @@
       <nav>
         <ul class="navbar">
           <li><a class="home-link nav-link">Home</a></li>
-          <li><a class="project-link nav-link">Das Projekt</a></li>
-          <li><a class='nav-link about-us-link'>Über Uns</a>
+          <li id="project-li"><a class="project-link nav-link">Das Projekt</a></li>
+          <li id="about-us-li"><a class='nav-link about-us-link'>Über Uns</a>
             <ul>
               <li class="nested-list-item"><a class='nav-link'>Das Team</a></li>
               <li class="nested-list-item"><a class='nav-link'>Unsere Partner</a></li>
@@ -56,6 +87,19 @@
   <div class="image-container">
     <script>$(".image-container").backstretch("images/background.jpeg");</script>
     <img id="image-text" src="images/text.svg">
+    <div id="emailbox">
+      <button type="button" class="email-close-button">x</button>
+      <p>Du möchtest erfahren ab wann sie lieferbar sind? Dann trag dich jetzt mit deiner E-Mail-Adresse ein!</p>
+      <form class="form-inline" role="form" name='subscribe' onsubmit='return checkForm()' method="post">
+        <div class="form-grp">
+          <label class="email-label" for="email">Email:</label>
+          <input name="email" type="text" class="form-cntrl text-input" id="email-field">
+        </div>
+        <div class="form-grp">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+    </div>
     <img class="down-arrow" src="images/down_arrow.png">
   </div>
 
@@ -205,8 +249,6 @@
             <h3 class="contact">Kontakt</h3>
             General inquiries: <a href="mailto:info@njagala.com">info@njagala.com</a><br>
             Website feedback: <a href="mailto:website@njagala.com">website@njagala.com</a><br>
-            Team leaders: Bea <a href="mailto:bea@njagala.com">(bea@njagala.com)</a> &amp; Felix <a href="mailto:felix@njagala.com">(felix@njagala.com)</a><br>
-
           </p>
         </div>
       </div>
@@ -215,8 +257,8 @@
     <footer class="container full-width">
       <div class="col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
         <h2 id='footer-header'>Footer *placeholder*</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <p class="footer">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
         </p>
       </div>
     </footer>

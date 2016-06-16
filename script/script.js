@@ -1,3 +1,45 @@
+function checkForm()
+{
+  var x = document.getElementById("email-field").value.replace(/\s/g, '');
+  var atpos = x.indexOf('@');
+  var dotpos = x.indexOf('.');
+  var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+
+  if (!filter.test(x) || x.length < 6 || atpos < 1 || dotpos == -1)
+  {
+    // alert('Ungültige E-Mail-Adresse. Bitte prüfen Sie Ihre Eingabe.');
+    swal({
+      title: "Fehler!",
+      text: "Ungültige E-Mail-Adresse, bitte Eingabe überprufen.",
+      type: "error",
+      animation: "pop",
+      confirmButtonColor: "#888",
+      confirmButtonText: "Okay",
+      allowOutsideClick: true,
+      allowEscapeKey: true
+    })
+    return false;
+  }
+  else
+  {
+    return true;
+  }
+}
+
+function showSuccess()
+{
+  swal({
+    title: "Perfekt!",
+    text: "Sie werden nun per E-Mail benachrichtigt, sobald wir loslegen.",
+    type: "success",
+    animation: "pop",
+    confirmButtonColor: "#888",
+    confirmButtonText: "Ok!",
+    allowOutsideClick: true,
+    allowEscapeKey: true
+  })
+}
+
 $(document).ready(function() {
 
   var scrollSpeed = 1.0; // => px/ms
@@ -36,6 +78,10 @@ $(document).ready(function() {
   $('#burger-image').click(function() {
     $(".burger-menu").show(burgerAnimation);
     burgerMenuActive = true;
+  });
+
+  $('.email-close-button').click(function() {
+    $("#emailbox").hide(burgerAnimation);
   });
 
   //hide burger menu when back button was clicked
