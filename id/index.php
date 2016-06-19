@@ -46,20 +46,20 @@
             var card' . $i . 'BackShown = false;
             $( "#card' . $i . '" ).hover(
               function() {
-                $("#middle' . $i . ', #front' . $i . '").fadeOut(0);
+                $("#middle' . $i . ', #front' . $i . '").fadeOut(300);
                 card' . $i . 'BackShown = true;
               }, function() {
-                $("#middle' . $i . ', #front' . $i . '").fadeIn(0);
+                $("#middle' . $i . ', #front' . $i . '").fadeIn(300);
                 card' . $i . 'BackShown = false;
               }
             );
 
             $("#card' . $i . '").click(function() {
               if (card' . $i . 'BackShown) {
-                $("#middle' . $i . ', #front' . $i . '").fadeIn(0);
+                $("#middle' . $i . ', #front' . $i . '").fadeIn(300);
                 card' . $i . 'BackShown = false;
               } else {
-                $("#middle' . $i . ', #front' . $i . '").fadeOut(0);
+                $("#middle' . $i . ', #front' . $i . '").fadeOut(300);
                 card' . $i . 'BackShown = true;
               }
             });
