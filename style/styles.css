@@ -8,6 +8,18 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
+footer {
+	color: #444;
+}
+
+footer div p {
+	text-align: center;
+}
+
+.footer.copyright {
+	text-align: center;
+}
+
 /*   misc   */
 
 .avatart, .avatarb {

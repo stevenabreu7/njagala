@@ -1,5 +1,6 @@
 nav {
 	float: right;
+	margin-right: 10px;
 	margin-top: 20px;
 	height: 50px;
 }
@@ -12,7 +13,7 @@ nav ul li {
 	float: left;
 	list-style: none;
 	text-align: center;
-	width: 120px;
+	width: 100px;
 	color: #fff;
 	padding: 0;
 	margin: 0;
@@ -20,6 +21,23 @@ nav ul li {
 
 nav ul li:first-of-type {
 	border: none;
+}
+
+nav ul li:last-of-type {
+	border-left: none;
+}
+
+.external-link-icon {
+	font-size: 12px;
+}
+
+.donate {
+	width: 100px;
+	/*background-color: gray;*/
+	border: 4px solid white;
+	padding: 4px 11px;
+	border-radius: 8px;
+	cursor: pointer;
 }
 
 nav ul li {

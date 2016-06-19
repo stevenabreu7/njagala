@@ -33,19 +33,27 @@
         </div>
         <nav>
           <ul>
-            <li><a class="first home">Home</a></li>
+            <li><a class="home link">Home</a></li>
             <li><a class="first link">Idee</a></li>
-            <li><a class='second link'>T-Shirt</a></li>
-            <li><a class='third link'>Crew</a></li>
-            <li><a class='fourth link'>Funding</a></li>
-            <li class="leftof-nested-parent"><a class='fifth link'>News</a></li>
-            <li class="nested-parent"><a class="sixth link">Über Uns</a>
+            <li class="leftof-nested-parent"><a class='second link'>T-Shirt</a></li>
+            <li class="nested-parent"><a class="third link">Über Uns</a>
               <ul>
                 <li><a class='link'>Das Team</a></li>
                 <li><a class='link'>Unsere Partner</a></li>
               </ul>
             </li>
-            <li><a class='seventh link'>Kontakt</a></li>
+            <li><a href="blog/" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
+            <li><a class='fourth link'>Kontakt</a></li>
+            <!-- Paypal Donate Button -->
+            <li>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
+                <!-- <input class="donate" type="image" src="http://njagala.com/images/paypal/button.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal."> -->
+                <a class="donate">Unterstützen!</a>
+                <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </li>
           </ul>
         </nav>
 
@@ -60,19 +68,12 @@
       <script>$(".image-container").backstretch("images/background.jpeg");</script>
       <img class="text" src="images/text.svg">
       <img class="down-arrow" src="images/down_arrow.png">
-      <!-- Paypal Donate Button -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
-        <input class="donate" type="image" src="http://njagala.com/images/paypal/button.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
-        <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
-      </form>
     </div>
 
     <!-- Email Form -->
     <div class="email-box">
       <div class="close-email-box"><span class="close-email-box glyphicon glyphicon-remove"></span></div>
-      <p>Du möchtest erfahren ab wann sie lieferbar sind? Dann trag dich jetzt mit deiner E-Mail-Adresse ein!</p>
+      <p>Möchtest Du einer der ersten Besitzer unseres T-Shirts sein? Dann trage hier Deine E-Mail Adresse ein.</p>
       <form class="form-inline" role="form" name='subscribe' onsubmit='return checkForm();' method="post">
           <label class="email-label" for="email">Email:</label>
           <input id="email-input" class="text-input" name="email" type="text">
@@ -88,19 +89,17 @@
 
       <!-- burger menu content -->
       <ul class="burger-nav">
-        <li><a class="first home">Home</a></li>
+        <li><a class="home link">Home</a></li>
         <li><a class="first link">Idee</a></li>
         <li><a class='second link'>T-Shirt</a></li>
-        <li><a class='third link'>Crew</a></li>
-        <li><a class='fourth link'>Funding</a></li>
-        <li><a class='fifth link'>News</a></li>
-        <li><a class="sixth link">Über Uns</a>
+        <li><a class="third link">Über Uns</a>
           <ul>
             <li><a class='link'>Das Team</a></li>
             <li><a class='link'>Unsere Partner</a></li>
           </ul>
         </li>
-        <li><a class='seventh link'>Kontakt</a></li>
+        <li><a href="blog/" target="_blank" class='link'>News</a></li>
+        <li><a class='fourth link'>Kontakt</a></li>
       </ul>
       <p class="copyright">© Njagala 2016</p>
     </div>
@@ -109,38 +108,31 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~ CONTENT BEGINS HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <div class="rest-of-page">
 
-      <!-- First section -->
+      <!-- Project Section -->
       <div class="container full-width">
-        <?php buildFirstSection(); ?>
+        <?php buildProjectSection(); ?>
       </div>
 
-      <!-- Second Section -->
+      <!-- T-Shirt Section -->
+      <div class="container full-width">
+        <?php buildTshirtSection(); ?>
+      </div>
+
+      <!-- About Section -->
       <div class="container full-width about-us-container">
-        <?php buildSecondSection(); ?>
+        <?php buildAboutSection(); ?>
       </div>
 
-      <!-- Third Section -->
+      <!-- Contact Section -->
       <div class="container full-width">
-        <?php buildThirdSection(); ?>
-      </div>
-
-      <!-- Fourth Section -->
-      <div class="container full-width">
-        <?php buildFourthSection(); ?>
-      </div>
-
-      <!-- Fifth Section -->
-      <div class="container full-width">
-        <?php buildFifthSection(); ?>
+        <?php buildContactSection(); ?>
       </div>
 
       <!-- Footer -->
       <footer class="container full-width">
         <div class="col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
-          <h2 id='footer-header'>Footer *placeholder*</h2>
-          <p class="footer">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
-          </p>
+          <p>Beautiful, handmade clothes made in Uganda.</p>
+          <p class="footer copyright">© Njagala 2016</p>
         </div>
       </footer>
   </div>
@@ -205,7 +197,7 @@
       $conn->close();
     }
 
-    function buildFirstSection()
+    function buildProjectSection()
     {
       echo '
       <div class="row first">
@@ -235,10 +227,10 @@
       ';
     }
 
-    function buildSecondSection()
+    function buildAboutSection()
     {
       echo '
-      <div class="row second">
+      <div class="row third">
         <h2 id="about-header">Wir sind Njagala.</h2>
         <hr>
         <div class="pad col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
@@ -248,61 +240,36 @@
           </p>
         </div>
         <div class="about-us-team">
-          <div class="col-xs-2 col-xs-offset-1">
-            <img class="avatart" src="images/avatars/male1.png">
-          </div>
-          <div class="col-xs-2 fill">
-            <img class="avatart" src="images/avatars/male2.png">
-          </div>
-          <div class="col-xs-2 fill">
-            <img class="avatart" src="images/avatars/male3.png">
-          </div>
-          <div class="col-xs-2 fill">
-            <img class="avatart" src="images/avatars/male3.png">
-          </div>
-          <div class="col-xs-2 fill">
-            <img class="avatart" src="images/avatars/female1.png">
-          </div>
-          <div class="col-xs-2 col-xs-offset-1">
-            <img class="avatarb" src="images/avatars/female2.png">
-          </div>
-          <div class="col-xs-2 fill">
-            <img class="avatarb" src="images/avatars/female1.png">
-          </div>
-          <div class="col-xs-2 fill">
-            <img class="avatarb" src="images/avatars/female2.png">
-          </div>
-          <div class="col-xs-2">
-            <img class="avatarb" src="images/avatars/male1.png">
-          </div>
-          <div class="col-xs-2 fill">
-            <img class="avatarb" src="images/avatars/male2.png">
-          </div>
+      ';
+
+
+
+      echo '
         </div>
-      </div>
+        </div>
       ';
     }
 
-    function buildThirdSection()
-    {
-      echo '
-      <div class="row third">
-        <h2 id="funding-header">Money on my mind</h2>
-        <hr>
-        <div class="pad col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
-          <p class="funding">
-            <h3 class="funding">Funding</h3>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
-          </p>
-        </div>
-      </div>
-      ';
-    }
+    // function buildFundingSection()
+    // {
+    //   echo '
+    //   <div class="row third">
+    //     <h2 id="funding-header">Money on my mind</h2>
+    //     <hr>
+    //     <div class="pad col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
+    //       <p class="funding">
+    //         <h3 class="funding">Funding</h3>
+    //         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+    //       </p>
+    //     </div>
+    //   </div>
+    //   ';
+    // }
 
-    function buildFourthSection()
+    function buildTshirtSection()
     {
       echo '
-      <div class="row fourth">
+      <div class="row second">
         <h2 id="product-header">It is all about the shirt</h2>
         <hr>
         <div class="pad col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
@@ -316,20 +283,28 @@
       ';
     }
 
-    function buildFifthSection()
+    function buildContactSection()
     {
       echo '
-      <div class="row fifth">
+      <div class="row fourth">
         <h2 id="contact-header">Get in touch</h2>
         <hr>
         <div class="pad col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
           <p class="contact">
             <h3 class="contact">Kontakt</h3>
             General inquiries: <a href="mailto:info@njagala.com">info@njagala.com</a><br>
-            Website feedback: <a href="mailto:website@njagala.com">website@njagala.com</a><br>
           </p>
         </div>
       </div>
+      ';
+    }
+
+    function buildContactCards()
+    {
+      echo '
+        <div class="col-xs-2 col-xs-offset-1">
+          <img class="avatart" src="images/avatars/male1.png">
+        </div>
       ';
     }
   ?>
