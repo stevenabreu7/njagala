@@ -1,6 +1,6 @@
 function checkForm()
 {
-  var x = document.getElementById("email-field").value.replace(/\s/g, '');
+  var x = document.getElementById("email-input").value.replace(/\s/g, '');
   var atpos = x.indexOf('@');
   var dotpos = x.indexOf('.');
   var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
@@ -28,7 +28,7 @@ function checkForm()
 
 function showSuccess()
 {
-  $('#emailbox').hide(0);
+  $('.email-box').hide(0);
   swal({
     title: "Perfekt!",
     text: "Sie werden nun per E-Mail benachrichtigt, sobald wir loslegen.",
@@ -81,12 +81,12 @@ $(document).ready(function() {
     burgerMenuActive = true;
   });
 
-  $('.email-close-button').click(function() {
-    $("#emailbox").hide(burgerAnimation);
+  $('.close-email-box').click(function() {
+    $(".email-box").hide(burgerAnimation);
   });
 
   //hide burger menu when back button was clicked
-  $('#back-arrow').click(function() {
+  $('.burger-back-arrow').click(function() {
     $(".burger-menu").hide(burgerAnimation);
     burgerMenuActive = false;
   });
@@ -95,10 +95,10 @@ $(document).ready(function() {
   var clickCounter = 1;
   $('header').click(function(){
     if (clickCounter != 1) {
-      $('.navbar-bg-image').attr('src','images/barkkcloth.png');
+      $('.navbar-background img').attr('src','images/barkkcloth.png');
       clickCounter = 1;
     } else {
-      $('.navbar-bg-image').attr('src','images/barkcloth.png');
+      $('.navbar-background img').attr('src','images/barkcloth.png');
       clickCounter++;
     }
   });
@@ -107,23 +107,23 @@ $(document).ready(function() {
     var target = $(event.target);
     var offsetForTargetDict = {
       '.down-arrow' : '.rest-of-page',
-      '.project-link' : '.about-njagala-section',
-      '.about-us-link' : '.about-us-section',
-      '.funding-link' : '.funding-section',
-      '.product-link' : '.product-section',
-      '.contact-link' : '.contact-section'
+      '.first.link' : '.first.row',
+      '.second.link' : '.second.row',
+      '.third.link' : '.third.row',
+      '.fourth.link' : '.fourth.row',
+      '.fifth.link' : '.fifth.row'
     }
 
     for (var tg in offsetForTargetDict) {
       if (target.is(tg)) {
-        var toScroll = $(offsetForTargetDict[tg]).offset().top - $('.navigation-bar-wrapper').height();
+        var toScroll = $(offsetForTargetDict[tg]).offset().top - $('.navbar-wrapper').height();
         $('html, body').scrollTo(toScroll);
       }
     }
   });
 
   //scroll all the way up when home link is clicked
-  $(".home-link").click(function(){
+  $(".home.link").click(function(){
     $('html, body').scrollTo(0);
   });
 
@@ -131,18 +131,18 @@ $(document).ready(function() {
   $(window).scroll(function(){
 
     //change navbar style when scrolling
-    var firstSec = $('.rest-of-page').offset().top - $('.navigation-bar-wrapper').height();
+    var firstSec = $('.rest-of-page').offset().top - $('.navbar-wrapper').height();
     var scrollPos = $(window).scrollTop();
 
     if (scrollPos >= firstSec - 100 && scrollPos < firstSec + 0) {
       var opacityToSet = ((scrollPos - firstSec + 100)/100);
-      $('.navigation-bar-background').css('opacity', opacityToSet);
-      $('.nested-list-item').css({ 'background-image': 'url(images/barkkcloth.png)' });
+      $('.navbar-background').css('opacity', opacityToSet);
+      $('nav ul li ul li').css({ 'background-image': 'url(images/barkkcloth.png)' });
     } else if (scrollPos > firstSec + 100) {
-      $('.navigation-bar-background').css('opacity', '1.0');
+      $('.navbar-background').css('opacity', '1.0');
     } else if (scrollPos < firstSec) {
-      $('.navigation-bar-background').css('opacity', '0.0');
-      $('.nested-list-item').css({ 'background': 'none'});
+      $('.navbar-background').css('opacity', '0.0');
+      $('nav ul li ul li').css({ 'background': 'none'});
     }
   });
 });

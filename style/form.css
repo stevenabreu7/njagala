@@ -1,0 +1,97 @@
+.email-box {
+	text-align: center;
+	position: absolute;
+	padding: 10px 20px 20px 20px;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	left: 5%;
+	margin-left: 0px;
+	width: 90%;
+	top: 90px;
+	bottom: auto;
+}
+
+.email-label {
+	font-size: 18px;
+	position: relative;
+	top: 2px;
+	color: #fff;
+}
+
+.btn-default, .text-input {
+	height: 30px;
+}
+
+.text-input {
+	width: 250px;
+	border: 2px solid white;
+	border-radius: 4px;
+	margin: 0px 10px;
+}
+
+.btn-default {
+	vertical-align: middle;
+	color: #333;
+}
+
+.close-email-box {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background-color: #fff;
+	color: #aaa;
+	opacity: 0.9;
+	padding: 5px;
+	border-radius: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+	.email-box {
+		left: 5%;
+		margin-left: 0px;
+		width: 90%;
+		top: 90px;
+		bottom: auto;
+	}
+	.text-input {
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 410px) {
+	.email-box {
+		left: 5%;
+		margin-left: 0px;
+		width: 90%;
+		top: 20%;
+		bottom: auto;
+		border: 1px solid white;
+		background: rgba(220, 220, 220, 0.99);
+		opacity: 0.9;
+		padding-top: 20%;
+		padding-bottom: 25%;
+	}
+	.text-input {
+		width: auto;
+		margin: 0px 4px;
+	}
+	.email-label {
+		color: #555;
+	}
+	.email-close-button {
+		position: absolute;
+		top: -10px;
+		right: -5px;
+		border: 2px solid white;
+		background-color: #ddd;
+		color: #fff;
+		padding: 10px
+		border-radius: 20px;
+	}
+}
+
+@media only screen and (max-width: 353px) {
+	.btn-default {
+		margin-top: 10px;
+	}
+}
