@@ -34,16 +34,18 @@
         <nav>
           <ul>
             <li><a class="first home">Home</a></li>
-            <li class="leftof-nested-parent"><a class="first link">Das Projekt</a></li>
-            <li class="nested-parent"><a class='second link'>Über Uns</a>
+            <li><a class="first link">Idee</a></li>
+            <li><a class='second link'>T-Shirt</a></li>
+            <li><a class='third link'>Crew</a></li>
+            <li><a class='fourth link'>Funding</a></li>
+            <li class="leftof-nested-parent"><a class='fifth link'>News</a></li>
+            <li class="nested-parent"><a class="sixth link">Über Uns</a>
               <ul>
                 <li><a class='link'>Das Team</a></li>
                 <li><a class='link'>Unsere Partner</a></li>
               </ul>
             </li>
-            <li><a class='third link'>Funding</a></li>
-            <li><a class='fourth link'>Das Produkt</a></li>
-            <li><a class='fifth link'>Kontakt</a></li>
+            <li><a class='seventh link'>Kontakt</a></li>
           </ul>
         </nav>
 
@@ -58,6 +60,13 @@
       <script>$(".image-container").backstretch("images/background.jpeg");</script>
       <img class="text" src="images/text.svg">
       <img class="down-arrow" src="images/down_arrow.png">
+      <!-- Paypal Donate Button -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
+        <input class="donate" type="image" src="http://njagala.com/images/paypal/button.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+      </form>
     </div>
 
     <!-- Email Form -->
@@ -79,17 +88,19 @@
 
       <!-- burger menu content -->
       <ul class="burger-nav">
-        <li><a class="link home">Home</a></li>
-        <li><a class="link first">Das Projekt</a></li>
-        <li><a class="link second">Über Uns</a>
+        <li><a class="first home">Home</a></li>
+        <li><a class="first link">Idee</a></li>
+        <li><a class='second link'>T-Shirt</a></li>
+        <li><a class='third link'>Crew</a></li>
+        <li><a class='fourth link'>Funding</a></li>
+        <li><a class='fifth link'>News</a></li>
+        <li><a class="sixth link">Über Uns</a>
           <ul>
             <li><a class='link'>Das Team</a></li>
             <li><a class='link'>Unsere Partner</a></li>
           </ul>
         </li>
-        <li><a class='link third'>Funding</a></li>
-        <li><a class='link fourth'>Das Produkt</a></li>
-        <li><a class='link fifth'>Kontakt</a></li>
+        <li><a class='seventh link'>Kontakt</a></li>
       </ul>
       <p class="copyright">© Njagala 2016</p>
     </div>
