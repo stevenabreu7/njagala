@@ -82,11 +82,11 @@ $(document).ready(function() {
   });
 
   $('#nav-donate-btn').click(function() {
-    $('.paypal-redirect').show();
+    $('.paypal-redirect').slideDown();
   });
 
   $('#close-redirect').click(function() {
-    $('.paypal-redirect').hide();
+    $('.paypal-redirect').slideUp();
   });
 
   $('.close-email-box').click(function() {
