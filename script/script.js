@@ -81,17 +81,12 @@ $(document).ready(function() {
     burgerMenuActive = true;
   });
 
-  $('.donate').click(function() {
-    swal({
-      title: "Unterstützen",
-      text: "Du findest unser Projekt super und möchtest uns gerne finanziell unterstützen? Wir freuen uns über jede Spende!",
-      type: "info",
-      animation: "pop",
-      confirmButtonColor: "#888",
-      confirmButtonText: "Zu PayPal",
-      allowOutsideClick: true,
-      allowEscapeKey: true
-    })
+  $('#nav-donate-btn').click(function() {
+    $('.paypal-redirect').show();
+  });
+
+  $('#close-redirect').click(function() {
+    $('.paypal-redirect').hide();
   });
 
   $('.close-email-box').click(function() {

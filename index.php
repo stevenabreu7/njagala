@@ -50,7 +50,7 @@
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
                 <!-- <input class="donate" type="image" src="http://njagala.com/images/paypal/button.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal."> -->
-                <a class="donate">Unterstützen!</a>
+                <a id="nav-donate-btn" class="donate">Unterstützen!</a>
                 <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
               </form>
             </li>
@@ -68,6 +68,19 @@
       <script>$(".image-container").backstretch("images/background.jpeg");</script>
       <img class="text" src="images/text.svg">
       <img class="down-arrow" src="images/down_arrow.png">
+    </div>
+
+    <!-- Paypal Modal -->
+    <div class="paypal-redirect">
+      <span id="close-redirect" class="glyphicon glyphicon-remove"></span>
+      <h3>Unterstützen</h3>
+      <p>Du findest unser Projekt super und möchtest uns gerne finanziell unterstützen? Wir freuen uns über jede Spende!</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
+        <input id="redirect-button" class="donate" type="image" src="http://njagala.com/images/paypal/button.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+      </form>
     </div>
 
     <!-- Email Form -->
