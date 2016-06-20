@@ -102,6 +102,10 @@ hr {
 	padding: 0px 20px;
 }
 
+.paragraph-title {
+	font-weight: 900;
+}
+
 .row {
 	padding-bottom: 30px;
 }
