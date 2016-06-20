@@ -11,6 +11,10 @@
 	bottom: auto;
 }
 
+.email-box p {
+	text-align: center;
+}
+
 .email-label {
 	font-size: 18px;
 	position: relative;

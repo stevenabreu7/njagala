@@ -13,7 +13,7 @@
     <input class="button" type="submit" name="sent">
     <input class="button" type="reset">
   </form>
-  <a href="index.php">← back to blog</a>
+  <a href="index.php">&larr; back to blog</a>
   <script>
   $(document).ready(function() {
     $(window).resize(function() {

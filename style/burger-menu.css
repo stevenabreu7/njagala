@@ -51,6 +51,10 @@
 	font-weight: bold;
 }
 
+.burger-nav .external-link-icon {
+	font-size: 20px;
+}
+
 .burger-nav a {
 	text-decoration: none;
 	color: #fff;
@@ -70,6 +74,9 @@
 	}
 	.burger-menu {
 		width: 200px;
+	}
+	.burger-nav .external-link-icon {
+		font-size: 15px;
 	}
 }
 
@@ -95,11 +102,17 @@
 		font-size: 25px;
 		padding: 17px 0;
 	}
+	.burger-nav .external-link-icon {
+		font-size: 18px;
+	}
 }
 
 @media only screen and (max-height: 525px) {
 	.burger-nav li {
 		font-size: 15px;
 		padding: 10px 0;
+	}
+	.burger-nav .external-link-icon {
+		font-size: 12px;
 	}
 }

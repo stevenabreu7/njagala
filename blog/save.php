@@ -43,6 +43,6 @@
   }
 ?>
 <br><br>
-<a href="index.php">→ go to blog</a>
+<a class="button" href="index.php">&rarr; go to blog</a>
 </body>
 </html>

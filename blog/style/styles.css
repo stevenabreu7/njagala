@@ -24,7 +24,7 @@ h2 {
 	margin-bottom: -10px;
 }
 
-a {
+a.button {
 	text-decoration: none;
 	background-color: blue;
 	border-radius: 5px;
@@ -34,4 +34,9 @@ a {
 	position: relative;
 	top: 10px;
 	left: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
 }

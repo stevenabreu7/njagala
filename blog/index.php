@@ -5,7 +5,7 @@
   </head>
   <body>
     <h2>njagala news</h2>
-    <a class="create-button" href="create.php">+ create new article</a>
+    <a class="button" href="create.php">+ create new article</a>
     <div class="container">
   <?php
 
@@ -22,7 +22,7 @@
 
     mysqli_select_db($con, "njagala");
 
-    $res = mysqli_query($con, "select * from blog order by date");
+    $res = mysqli_query($con, "select * from blog order by date desc");
 
     while ($row = mysqli_fetch_assoc($res))
     {

@@ -111,7 +111,7 @@
             <li><a class='link'>Unsere Partner</a></li>
           </ul>
         </li>
-        <li><a href="blog/" target="_blank" class='link'>News</a></li>
+        <li><a href="blog/" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
         <li><a class='fourth link'>Kontakt</a></li>
       </ul>
       <p class="copyright">© Njagala 2016</p>
