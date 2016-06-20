@@ -1,4 +1,9 @@
 <html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
 <?php
   if (isset($_POST["sent"]))
   {
@@ -12,10 +17,10 @@
     $dbname = "d0227345";
 
     // // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    // $conn = new mysqli($servername, $username, $password, $dbname);
 
     // Local connection
-    // $conn = new mysqli("", "root", "", "njagala");
+    $conn = new mysqli("", "root", "", "njagala");
 
 
     // Check connection
@@ -38,5 +43,6 @@
   }
 ?>
 <br><br>
-<a href="index.php">go to blog</a>
+<a href="index.php">→ go to blog</a>
+</body>
 </html>
