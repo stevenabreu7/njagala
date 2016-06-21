@@ -12,6 +12,7 @@ hr#title-hr {
 	position: relative;
 	top: -14px;
 	color: black;
+	margin-bottom: -25px;
 }
 
 .container {
@@ -33,15 +34,26 @@ h2 {
 }
 
 a.button {
+	display: inline-block;
+	text-align: center;
+	width: 200px;
+	max-width: 100%;
 	text-decoration: none;
 	background-color: blue;
 	border-radius: 5px;
 	margin-top: 20px;
+	margin-right: 20px;
 	padding: 10px;
 	color: white;
 	position: relative;
 	top: 10px;
 	left: 0px;
+}
+
+@media only screen and (max-width: 610px) {
+	a.button {
+		width: 100%;
+	}
 }
 
 a {

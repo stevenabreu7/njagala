@@ -6,6 +6,7 @@
   <body>
     <h2>njagala news</h2>
     <hr id="title-hr">
+    <a class="button" href="../">&larr; back to homepage</a>
     <a class="button" href="create.php">+ create new article</a>
     <div class="container">
   <?php
@@ -15,10 +16,10 @@
     $password = "cwb6pcGfnS8XWAMP";
     $dbname = "d0227345";
     // Create connection - on server
-    // $con = new mysqli($servername, $username, $password, $dbname);
+    $con = new mysqli($servername, $username, $password, $dbname);
 
     //Create connection: locally
-    $con = new mysqli("", "root");
+    // $con = new mysqli("", "root");
 
 
     mysqli_select_db($con, "njagala");

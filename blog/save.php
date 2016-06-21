@@ -17,10 +17,10 @@
     $dbname = "d0227345";
 
     // // Create connection
-    // $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
     // Local connection
-    $conn = new mysqli("", "root", "", "njagala");
+    // $conn = new mysqli("", "root", "", "njagala");
 
 
     // Check connection
