@@ -5,6 +5,7 @@
   </head>
   <body>
     <h2>njagala news</h2>
+    <hr id="title-hr">
     <a class="button" href="create.php">+ create new article</a>
     <div class="container">
   <?php

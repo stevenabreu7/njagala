@@ -6,6 +6,14 @@ body {
 	background-color: #F6EDDE;
 }
 
+hr#title-hr {
+	width: 200%;
+	margin-left: -50%;
+	position: relative;
+	top: -14px;
+	color: black;
+}
+
 .container {
 	position: relative;
 	top: 30px;

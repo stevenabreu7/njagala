@@ -10,6 +10,63 @@ body {
 	font-size: 16px;
 }
 
+hr {
+	border: none;
+	color: #aaa;
+	background-color: #aaa;
+	height: 1px;
+}
+
+.odd, .rest-of-page, footer {
+	background-color: #F5EADB;
+}
+
+.row.first {
+	margin-top: -10px;
+}
+
+.even {
+	background-color: #F1E3CF;
+}
+
+.group-picture {
+	width: 100%;
+	margin-bottom: 20px;
+	margin-top: -20px;
+	background-color: #E7E0D5;
+}
+
+.group-picture img {
+	width: 80%;
+	margin-left: 10%;
+}
+
+@media only screen and (max-width: 992px) {
+	.group-picture img {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.group-picture img {
+		width: 120%;
+		margin-left: -10%;
+	}
+}
+
+.enactus-logo img, .njagala-logo img, .hih-logo img, .uganda-logo img {
+	width: 100%;
+}
+
+.njagala-box, .enactus-box, .hih-box, .uganda-box {
+	margin-top: 20px;
+}
+
+.nomarg {
+	margin: 0px;
+	padding: 0px;
+}
+
 footer {
 	color: #444;
 }
@@ -40,7 +97,7 @@ footer div p {
 
 footer {
 	width: 100%;
-	background-color: #888;
+	background-color: #999;
 	padding-top: 20px;
 }
 

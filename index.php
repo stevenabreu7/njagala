@@ -144,7 +144,7 @@
       <!-- Footer -->
       <footer class="container full-width">
         <div class="col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
-          <p>Beautiful, handmade clothes made in Uganda.</p>
+          <p>Beautiful clothes, handmade in Uganda.</p>
           <p class="footer copyright">© Njagala 2016</p>
         </div>
       </footer>
@@ -213,10 +213,10 @@
     function buildProjectSection()
     {
       echo '
-      <div class="row first">
-        <h2 id="about-header">Wir sind Njagala.</h2>
+      <div class="row first odd">
+        <h2 id="about-header">Die Idee</h2>
         <hr>
-        <div class="pad col-xs-10 col-sm-10 col-lg-10 col-xs-offset-1 col-sm-offset-1">
+        <div class="pad col-xs-10 col-sm-10 col-lg-8 col-xs-offset-1 col-lg-offset-2">
           <!-- <h3 class="vision">Die Vision</h3> -->
           <p><span class="paragraph-title">Das Ziel von Njagala</span> ist es, einen nachhaltigen Wirtschafskreislauf durch die Produktion von afrikanisch-europäisch geprägter Mode in Uganda zu etablieren. Die hergestellten Kleidungsstücke sollen anschließend nach Deutschland exportiert und dort vertrieben werden. Durch den Transfer von Know-How im Bereich der Textilherstellung sowie von Devisen durch den hiesigen Vertrieb soll das Projekt in der Region einen vorbildhaften Charakter haben und langfristig Ableger-Projekte generieren.</p>
           <p><span class="paragraph-title">Massig Bio-Baumwolle nur für Export - </span>
@@ -233,27 +233,164 @@
     function buildAboutSection()
     {
       echo '
-      <div class="row third">
-        <h2 id="about-header">Wir sind Njagala.</h2>
+      <div class="row third odd">
+        <h2 id="about-header">Über Uns</h2>
         <hr>
-        <div class="pad col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
-        <p>
-          <span class="paragraph-title">Wir sind Njagala. </span></p><p>
-          Im Oktober 2015 haben wir das Projekt Njagala im Rahmen der Hochschulgruppe Enactus KIT e.V. am Karlsruher Institut für Technologie gegründet. Seitdem arbeiten wir Tag für Tag an der Erfüllung unseres Traums – dem perfekten Njagala T-Shirt, dem Unikat aus Uganda.
-        </p>
-        <p>
-          <span class="paragraph-title">Wir sind Enactus. </span></p><p>
-          Enactus ist eine internationale Non-Profit Organisation, die in 39 Ländern mehr als 70.500 Studierende mit gemeinnützig motiviertem Unternehmergeist vereint. Damit ist Enactus das weltweit größte Netzwerk seiner Art. Unterstützt von mehr als 440 Unternehmen entwickeln Studenten im Rahmen ihrer Projekte Geschäftsmodelle, um soziale und ökologische Herausforderungen unserer Zeit mit Kreativität und betriebswirtschaftlichen Methoden zu lösen. Nachhaltigkeit – sowohl im ökonomischen als auch ökologischen Sinne - ist dabei der Schlüssel zu langfristigem Erfolg.
-        </p>
-        <p>
-          <span class="paragraph-title">Hand in Hand für Uganda e.V.</span></p><p>
-          Hand in Hand für Uganda e.V. engagiert sich seit Jahren in vielfältiger Art und Weise in der Umgebung von Masaka, Uganda. Von der Unterstützung von Schulen, Waisenkindern und Frauen bis hin zu handwerklichen Tätigkeiten wie der Brunnenbau - HiH hilft. Schaut selbst.<br>
-          (Fast) seit Anfang an dürfen wir auf die Unterstützung von Hand in Hand für Uganda e.V. zählen. Wir haben HiH unglaublich viel zu verdanken, allem voran den Kontakt zu unseren SchneiderInnen. Daher an dieser Stelle ein großes DANKE für Alles.
-        </p>
-        <p>
-          <span class="paragraph-title">Das Team in Uganda</span></p><p>
-          Aktuell arbeiten vier speziell ausgebildete Schneider und Schneiderinnen Ugandas an der Produktion unserer T-Shirts. In unserer Schneiderei in Masaka stellen Sie täglich aufs Neue Ihre Fähigkeiten an der Nähmaschine unter Beweis. Für uns ist es selbstverständlich, Ihre Arbeit und Expertise fair zu vergüten und einen angemessenen Lohn zu bezahlen.
-        </p>
+        <div class="group-picture">
+          <img src="images/enactus-group.jpg">
+        </div>
+        <div class="row nomarg">
+          <div class="njagala-logo col-xs-6 col-sm-3 col-md-3 col-xs-offset-3 col-sm-offset-1 col-lg-offset-2">
+            <img src="images/logo.png">
+            <script>
+              $(document).ready(function() {
+                if ($(window).width() > 767)
+                {
+                  var imageBoxHeight = $(".njagala-box").height();
+                  var imageHeight = $(".njagala-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".njagala-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".njagala-logo img").css("margin-top", "0");
+                }
+                });
+                $(window).resize(function() {
+                  if ($(window).width() > 767)
+                  {
+                  var imageBoxHeight = $(".njagala-box").height();
+                  var imageHeight = $(".njagala-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".njagala-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".njagala-logo img").css("margin-top", "0");
+                }
+                });
+            </script>
+          </div>
+          <div class="njagala-box col-xs-10 col-sm-7 col-md-7 col-lg-5 col-xs-offset-1 col-sm-offset-0">
+          <p>
+            <span class="paragraph-title">Wir sind Njagala. </span></p><p>
+            Im Oktober 2015 haben wir das Projekt Njagala im Rahmen der Hochschulgruppe Enactus KIT e.V. am Karlsruher Institut für Technologie gegründet. Seitdem arbeiten wir Tag für Tag an der Erfüllung unseres Traums – dem perfekten Njagala T-Shirt, dem Unikat aus Uganda.
+          </p>
+          </div>
+        </div>
+        <div class="row nomarg">
+          <div class="enactus-logo col-xs-6 col-sm-3 col-md-3 col-xs-offset-3 col-sm-offset-1 col-lg-offset-2">
+            <img src="images/enactus.png">
+            <script>
+              $(document).ready(function() {
+                $(".enactus-logo img").load(function(){
+                  if ($(window).width() > 767)
+                  {
+                  var imageBoxHeight = $(".enactus-box").height();
+                  var imageHeight = $(".enactus-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".enactus-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".enactus-logo img").css("margin-top", "0");
+                }
+                });
+                $(window).resize(function() {
+                  if ($(window).width() > 767)
+                  {
+                  var imageBoxHeight = $(".enactus-box").height();
+                  var imageHeight = $(".enactus-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".enactus-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".enactus-logo img").css("margin-top", "0");
+                }
+                });
+              });
+            </script>
+          </div>
+          <div class="enactus-box col-xs-10 col-sm-7 col-md-7 col-lg-5 col-xs-offset-1 col-sm-offset-0">
+          <p>
+            <span class="paragraph-title">Wir sind Enactus. </span></p><p>
+            Enactus ist eine internationale Non-Profit Organisation, die in 39 Ländern mehr als 70.500 Studierende mit gemeinnützig motiviertem Unternehmergeist vereint. Damit ist Enactus das weltweit größte Netzwerk seiner Art. Unterstützt von mehr als 440 Unternehmen entwickeln Studenten im Rahmen ihrer Projekte Geschäftsmodelle, um soziale und ökologische Herausforderungen unserer Zeit mit Kreativität und betriebswirtschaftlichen Methoden zu lösen. Nachhaltigkeit – sowohl im ökonomischen als auch ökologischen Sinne - ist dabei der Schlüssel zu langfristigem Erfolg.
+          </p>
+          </div>
+        </div>
+
+
+
+        <div class="row nomarg">
+          <div class="hih-logo col-xs-6 col-sm-3 col-md-3 col-xs-offset-3 col-sm-offset-1 col-lg-offset-2">
+            <img src="images/handinhand.png">
+            <script>
+              $(document).ready(function() {
+                $(".hih-logo img").load(function(){
+                  if ($(window).width() > 767)
+                  {
+                  var imageBoxHeight = $(".hih-box").height();
+                  var imageHeight = $(".hih-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".hih-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".hih-logo img").css("margin-top", "0");
+                }
+                });
+                $(window).resize(function() {
+                  if ($(window).width() > 767)
+                  {
+                  var imageBoxHeight = $(".hih-box").height();
+                  var imageHeight = $(".hih-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".hih-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".hih-logo img").css("margin-top", "0");
+                }
+                });
+              });
+            </script>
+          </div>
+          <div class="hih-box col-xs-10 col-sm-7 col-md-7 col-lg-5 col-xs-offset-1 col-sm-offset-0">
+          <p>
+            <span class="paragraph-title">Hand in Hand für Uganda e.V.</span></p><p>
+            Hand in Hand für Uganda e.V. engagiert sich seit Jahren in vielfältiger Art und Weise in der Umgebung von Masaka, Uganda. Von der Unterstützung von Schulen, Waisenkindern und Frauen bis hin zu handwerklichen Tätigkeiten wie der Brunnenbau - HiH hilft. Schaut selbst.<br>
+            (Fast) seit Anfang an dürfen wir auf die Unterstützung von Hand in Hand für Uganda e.V. zählen. Wir haben HiH unglaublich viel zu verdanken, allem voran den Kontakt zu unseren SchneiderInnen. Daher an dieser Stelle ein großes DANKE für Alles.
+          </p>
+          </div>
+        </div>
+
+
+
+        <div class="row nomarg">
+          <div class="uganda-logo col-xs-6 col-sm-3 col-md-3 col-xs-offset-3 col-sm-offset-1 col-lg-offset-2">
+            <img src="images/uganda.png">
+            <script>
+              $(document).ready(function() {
+                $(".uganda-logo img").load(function(){
+                  if ($(window).width() > 767)
+                  {
+                  var imageBoxHeight = $(".uganda-box").height();
+                  var imageHeight = $(".uganda-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".uganda-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".uganda-logo img").css("margin-top", "0");
+                }
+                });
+                $(window).resize(function() {
+                  if ($(window).width() > 767)
+                  {
+                  var imageBoxHeight = $(".uganda-box").height();
+                  var imageHeight = $(".uganda-logo img").height();
+                  var imageMarginTop = (imageBoxHeight - imageHeight) / 2.5;
+                  $(".uganda-logo img").css("margin-top", imageMarginTop);
+                } else {
+                  $(".uganda-logo img").css("margin-top", "0");
+                }
+                });
+              });
+            </script>
+          </div>
+          <div class="uganda-box col-xs-10 col-sm-7 col-md-7 col-lg-5 col-xs-offset-1 col-sm-offset-0">
+            <p>
+              <span class="paragraph-title">Das Team in Uganda</span></p><p>
+              Aktuell arbeiten vier speziell ausgebildete Schneider und Schneiderinnen Ugandas an der Produktion unserer T-Shirts. In unserer Schneiderei in Masaka stellen Sie täglich aufs Neue Ihre Fähigkeiten an der Nähmaschine unter Beweis. Für uns ist es selbstverständlich, Ihre Arbeit und Expertise fair zu vergüten und einen angemessenen Lohn zu bezahlen.
+            </p>
+          </div>
         </div>
         <div class="about-us-team">
       ';
@@ -292,10 +429,10 @@
     function buildTshirtSection()
     {
       echo '
-      <div class="row second">
+      <div class="row second even">
         <h2 id="product-header">Mehr als nur ein T-Shirt</h2>
         <hr>
-        <div class="pad col-xs-10 col-sm-10 col-lg-10 col-xs-offset-1 col-sm-offset-1">
+        <div class="pad col-xs-10 col-sm-10 col-lg-8 col-xs-offset-1 col-lg-offset-2">
           <p class="product">
             <p>
               <span class="paragraph-title">Der Prozess - </span>
@@ -342,12 +479,11 @@
     function buildContactSection()
     {
       echo '
-      <div class="row fourth">
+      <div class="row fourth even">
         <h2 id="contact-header">Kontakt</h2>
         <hr>
-        <div class="pad col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
+        <div class="pad col-xs-10 col-sm-10 col-lg-8 col-xs-offset-1 col-lg-offset-2">
           <p class="contact">
-            <h3 class="contact">Kontakt</h3>
             General inquiries: <a href="mailto:info@njagala.com">info@njagala.com</a><br>
           </p>
         </div>
