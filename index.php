@@ -74,7 +74,7 @@
     <div class="paypal-redirect">
       <span id="close-redirect" class="glyphicon glyphicon-remove"></span>
       <h3>Unterstützen</h3>
-      <p>Du findest unser Projekt super und möchtest uns gerne finanziell unterstützen? Wir freuen uns über jede Spende!</p>
+      <p>Du findest unser Projekt super und möchtest uns gerne finanziell unterstützen? Wir freuen uns über jeden Beitrag!</p>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">

@@ -67,7 +67,7 @@ $(document).ready(function() {
     }
   });
 
-  $( ".nested-parent a" ).hover(
+  $( ".nested-parent" ).hover(
     function() {
       //change navbar style when scrolling
       var firstSec = $('.rest-of-page').offset().top - $('.navbar-wrapper').height();
@@ -77,6 +77,11 @@ $(document).ready(function() {
         $('.navbar-background').css('opacity', '1.0');
         $('nav ul li ul li').css({ 'background-image': 'url(images/barkkcloth.png)' });
       }
+
+      //hide email box
+      $(".email-box").hide(200);
+    }, function() {
+      $(".email-box").show(200);
     }
   );
 
