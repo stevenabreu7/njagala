@@ -29,7 +29,7 @@
       </div>
       <header>
         <div class="logo">
-          <img src='images/logo.png' >
+          <img class="logo-image" src='images/logo.png' >
         </div>
         <nav>
           <ul>
@@ -38,8 +38,8 @@
             <li class="leftof-nested-parent"><a class='second link'>T-Shirt</a></li>
             <li class="nested-parent"><a class="third link">Über Uns</a>
               <ul>
-                <li><a class='link'>Das Team</a></li>
-                <li><a class='link'>Unsere Partner</a></li>
+                <li><a class='third-one link'>Das Team</a></li>
+                <li><a class='third-two link'>Partner</a></li>
               </ul>
             </li>
             <li><a href="blog/" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
@@ -107,8 +107,8 @@
         <li><a class='second link'>T-Shirt</a></li>
         <li><a class="third link">Über Uns</a>
           <ul>
-            <li><a class='link'>Das Team</a></li>
-            <li><a class='link'>Unsere Partner</a></li>
+            <li><a class='third-one link'>Das Team</a></li>
+            <li><a class='third-two link'>Partner</a></li>
           </ul>
         </li>
         <li><a href="blog/" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
@@ -314,7 +314,7 @@
 
 
 
-        <div class="row nomarg">
+        <div class="row third-two-section nomarg">
           <div class="hih-logo col-xs-6 col-sm-3 col-md-3 col-xs-offset-3 col-sm-offset-1 col-lg-offset-2">
             <img src="images/handinhand.png">
             <script>

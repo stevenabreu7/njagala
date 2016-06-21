@@ -10,6 +10,10 @@ body {
 	font-size: 16px;
 }
 
+.link, glyphicon-remove, .close-email-box, .logo {
+	cursor: pointer;
+}
+
 hr {
 	border: none;
 	color: #aaa;

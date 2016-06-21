@@ -67,6 +67,19 @@ $(document).ready(function() {
     }
   });
 
+  $( ".nested-parent a" ).hover(
+    function() {
+      //change navbar style when scrolling
+      var firstSec = $('.rest-of-page').offset().top - $('.navbar-wrapper').height();
+      var scrollPos = $(window).scrollTop();
+
+      if (scrollPos > firstSec + 100) {
+        $('.navbar-background').css('opacity', '1.0');
+        $('nav ul li ul li').css({ 'background-image': 'url(images/barkkcloth.png)' });
+      }
+    }
+  );
+
   //hide burger menu if active and navbar turns visible
   $(window).resize(function() {
     if ($(window).width() > 1050 && burgerMenuActive) {
@@ -100,16 +113,16 @@ $(document).ready(function() {
   });
 
   // change bg image in nav-bar
-  var clickCounter = 1;
-  $('header').click(function(){
-    if (clickCounter != 1) {
-      $('.navbar-background img').attr('src','images/barkkcloth.png');
-      clickCounter = 1;
-    } else {
-      $('.navbar-background img').attr('src','images/barkcloth.png');
-      clickCounter++;
-    }
-  });
+  // var clickCounter = 1;
+  // $('header').click(function(){
+  //   if (clickCounter != 1) {
+  //     $('.navbar-background img').attr('src','images/barkkcloth.png');
+  //     clickCounter = 1;
+  //   } else {
+  //     $('.navbar-background img').attr('src','images/barkcloth.png');
+  //     clickCounter++;
+  //   }
+  // });
 
   $(document).click(function(event) {
     var target = $(event.target);
@@ -119,7 +132,9 @@ $(document).ready(function() {
       '.second.link' : '.second.row',
       '.third.link' : '.third.row',
       '.fourth.link' : '.fourth.row',
-      '.fifth.link' : '.fifth.row'
+      '.fifth.link' : '.fifth.row',
+      '.third-one.link' : '.row.third',
+      '.third-two.link' : '.third-two-section'
     }
 
     for (var tg in offsetForTargetDict) {
@@ -131,7 +146,7 @@ $(document).ready(function() {
   });
 
   //scroll all the way up when home link is clicked
-  $(".home.link").click(function(){
+  $(".home.link, .logo").click(function(){
     $('html, body').scrollTo(0);
   });
 
