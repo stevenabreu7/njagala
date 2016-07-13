@@ -74,7 +74,7 @@
     <div class="paypal-redirect">
       <span id="close-redirect" class="glyphicon glyphicon-remove"></span>
       <h3>Unterstützen</h3>
-      <p>Du findest unser Projekt super und möchtest uns gerne finanziell unterstützen? Wir freuen uns über jeden Beitrag!</p>
+      <p>Du findest unser Projekt super und möchtest uns gerne finanziell unterstützen?<br>Wir freuen uns über jeden Beitrag!</p>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
@@ -215,13 +215,13 @@
     {
       echo '
       <div class="row first odd">
-        <h2 id="about-header">Die Idee</h2>
+        <h2 id="idea-header">Die Idee</h2>
         <hr>
         <div class="pad col-xs-10 col-sm-10 col-lg-8 col-xs-offset-1 col-lg-offset-2">
           <!-- <h3 class="vision">Die Vision</h3> -->
           <p><span class="paragraph-title">Das Ziel von Njagala</span> ist es, einen nachhaltigen Wirtschafskreislauf durch die Produktion von afrikanisch-europäisch geprägter Mode in Uganda zu etablieren. Die hergestellten Kleidungsstücke sollen anschließend nach Deutschland exportiert und dort vertrieben werden. Durch den Transfer von Know-How im Bereich der Textilherstellung sowie von Devisen durch den hiesigen Vertrieb soll das Projekt in der Region einen vorbildhaften Charakter haben und langfristig Ableger-Projekte generieren.</p>
           <p><span class="paragraph-title">Massig Bio-Baumwolle nur für Export - </span>
-          In Uganda gibt es große Vorkommen an (Bio-)Baumwolle. Leider findet die Verarbeitung des Rohstoffes aufgrund niedrigerer Löhne und besserer Infrastruktur fast ausschließlich in Asien statt - die lokale Wirtschaft kann also kaum von diesen natürlich Ressourcen profitieren. Das wollen wir ändern!</p>
+          In Uganda gibt es große Vorkommen an (Bio-)Baumwolle. Leider findet die Verarbeitung des Rohstoffes aufgrund niedrigerer Löhne und besserer Infrastruktur fast ausschließlich in Asien statt - die lokale Wirtschaft kann also kaum von diesen natürlichen Ressourcen profitieren. Das wollen wir ändern!</p>
           <p><span class="paragraph-title">Rindenstoff - </span>
           Uganda beheimatet einen auf der Welt einzigartigen Textilschatz – die Rinde des dort wachsenden Mutuba-Baums! Aus dieser kann nämlich in Handarbeit und ohne Einsatz von Chemikalien das wohl älteste Textil der Welt, der Bark-Cloth, produziert werden. Das Verfahren ist dabei so nachhaltig, dass die Bäume dabei nicht zu Schaden kommen, sondern die Rinde mehrmals pro Jahr (!) geerntet werden kann.</p>
           <p><span class="paragraph-title">Gendersituation / Armut - </span>
