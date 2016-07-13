@@ -1,5 +1,6 @@
 <html>
 <head>
+  <title>new article</title>
   <link rel="stylesheet" type="text/css" href="style/create.css">
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>

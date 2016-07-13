@@ -1,8 +1,9 @@
 <html>
 <head>
+  <title>login</title>
   <link rel="stylesheet" type="text/css" href="style/create.css">
   <style>
-    a {
+    a.continue {
       background-color: transparent;
       color: black;
       text-decoration: underline;
@@ -29,7 +30,7 @@
     }
     echo '
       <span>success! ';
-    echo '<a href="' . $link . '">click to continue</a></span>';
+    echo '<a class="continue" href="' . $link . '">click to continue</a></span>';
      } else {
         echo '
           <h2>incorrect login</h2>
@@ -39,6 +40,7 @@
             <p><input id="date-input" class="text-input" placeholder="password" name="password" type="password"></p>
             <input class="button" type="submit" name="login">
           </form>
+          <a href="index.php">&larr; back to blog</a>
         ';
      }
   } else {
@@ -50,6 +52,7 @@
         <p><input id="date-input" class="text-input" placeholder="password" name="password" type="password"></p>
         <input class="button" type="submit" name="login">
       </form>
+      <a href="index.php">&larr; back to blog</a>
     ';
   }
 ?>

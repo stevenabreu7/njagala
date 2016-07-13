@@ -1,5 +1,6 @@
 <hmtl>
   <head>
+    <title>Njagala Blog</title>
     <meta charset="utf-8"/>
 
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
