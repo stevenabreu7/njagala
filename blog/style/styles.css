@@ -1,9 +1,9 @@
 body {
 	font-family: 'PT Sans', sans-serif;
-	width: 80%;
-	max-width: 800px;
-	margin: 20px auto 0px auto;
-	background-color: #F6EDDE;
+}
+
+.buttons {
+	text-align: center;
 }
 
 hr#title-hr {
@@ -17,7 +17,7 @@ hr#title-hr {
 
 .container {
 	position: relative;
-	top: 30px;
+	top: 90px;
 }
 
 h2 {
@@ -37,17 +37,17 @@ a.button {
 	display: inline-block;
 	text-align: center;
 	width: 200px;
-	max-width: 100%;
+	max-width: 90%;
 	text-decoration: none;
-	background-color: blue;
+	background-color: #BD612B;
 	border-radius: 5px;
 	margin-top: 20px;
 	margin-right: 20px;
+	margin-left: 20px;
 	padding: 10px;
 	color: white;
 	position: relative;
-	top: 10px;
-	left: 0px;
+	top: 80px;
 }
 
 @media only screen and (max-width: 610px) {
