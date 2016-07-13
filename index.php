@@ -66,7 +66,7 @@
     <!-- Landing Page Background Image -->
     <div class="image-container">
       <script>$(".image-container").backstretch("images/background.jpeg");</script>
-      <img class="text" src="images/text.svg">
+      <img class="text" src="images/icon_white.png">
       <img class="down-arrow" src="images/down_arrow.png">
     </div>
 
