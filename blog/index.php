@@ -9,8 +9,6 @@
     <script src="../frameworks/js/jquery-2.2.3.min.js"></script>
     <script src="../frameworks/jquery.backstretch.min.js"></script>
     <script src="../frameworks/js/bootstrap.min.js"></script>
-    <!-- <script src="../frameworks/sweetalert/dist/sweetalert.min.js"></script> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../frameworks/sweetalert/dist/sweetalert.css"> -->
     <!-- custom stuff -->
     <link rel="stylesheet" type="text/css" href="../style/styles.css">
     <link rel="stylesheet" type="text/css" href="../style/dark-nav-bar.css">
@@ -103,9 +101,9 @@
     </div>
 
     <div class="buttons">
-      <a class="button" href="../"><span class="glyphicon glyphicon-arrow-left"></span> back to home</a>
-      <a class="button" href="login.php?link=create"><span class="glyphicon glyphicon-edit"></span> new article</a>
-      <a class="button" href="login.php?link=edit"><span class="glyphicon glyphicon-cog"></span> edit articles</a>
+      <a class="button" href="../"><span class="glyphicon glyphicon-arrow-left"></span> Zurück zu Home</a>
+      <a class="button" href="login.php?link=create"><span class="glyphicon glyphicon-edit"></span> Neuer Artikel</a>
+      <a class="button" href="login.php?link=edit"><span class="glyphicon glyphicon-cog"></span> Artikel bearbeiten</a>
     </div>
     <div class="container">
   <?php
