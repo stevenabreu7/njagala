@@ -1,7 +1,8 @@
 <hmtl>
   <head>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8"/>
 
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../frameworks/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../frameworks/css/bootstrap-theme.min.css">
     <script src="../frameworks/js/jquery-2.2.3.min.js"></script>
@@ -39,7 +40,7 @@
                 <li><a href="../index.php" class='third-two link'>Partner</a></li>
               </ul>
             </li>
-            <li><a href="" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
+            <li><a href="" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
             <li><a href="../index.php" class='fourth link'>Kontakt</a></li>
             <!-- Paypal Donate Button -->
             <li>
@@ -94,7 +95,7 @@
             <li><a href="../index.php" class='third-two link'>Partner</a></li>
           </ul>
         </li>
-        <li><a href="" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
+        <li><a href="" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
         <li><a href="../index.php" class='fourth link'>Kontakt</a></li>
       </ul>
       <p class="copyright">© Njagala 2016</p>
@@ -136,8 +137,11 @@
 
     function renderArticle($titl, $dat, $tex)
     {
-      echo '<h3>' . $titl . '</h3><p class="date">' . $dat . '</p>';
-      echo '<p>' . $tex . '</p>';
+      $title = utf8_encode($titl);
+      $date = utf8_encode($dat);
+      $text = utf8_encode($tex);
+      echo '<h3>' . $title . '</h3><p class="date">' . $date . '</p>';
+      echo '<p>' . $text . '</p>';
     }
   ?>
 </div>
