@@ -14,6 +14,11 @@ body {
 	cursor: pointer;
 }
 
+.impressum-container {
+	position: absolute;
+	top: 100px;
+}
+
 hr {
 	border: none;
 	color: #aaa;
@@ -77,6 +82,15 @@ footer {
 
 footer div p {
 	text-align: center;
+}
+
+footer div p a {
+	text-decoration: none;
+	color: #444;
+}
+
+footer div p span {
+	height: 10px;
 }
 
 .footer.copyright {

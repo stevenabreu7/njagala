@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Content-related -->
+    <title>Njagala</title>
+    <meta http-equiv="author" content="Steven Abreu" />
+    <!-- Display-related -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- frameworks -->
+    <link rel="stylesheet" type="text/css" href="frameworks/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="frameworks/css/bootstrap-theme.min.css">
+    <script src="frameworks/js/jquery-2.2.3.min.js"></script>
+    <script src="frameworks/jquery.backstretch.min.js"></script>
+    <script src="frameworks/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="frameworks/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="frameworks/sweetalert/dist/sweetalert.css">
+    <!-- custom stuff -->
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="stylesheet" type="text/css" href="style/dark-nav-bar.css">
+    <script src="script/script.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar-wrapper">
+      <div class="navbar-background">
+        <img src="images/barkkcloth.png">
+      </div>
+      <header>
+        <div class="logo">
+          <a href="index.php" class="home link"><img class="logo-image" src='images/logo.png' ></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.php" class="home link">Home</a></li>
+            <li><a href="index.php" class="first link">Idee</a></li>
+            <li class="leftof-nested-parent"><a href="index.php" class='second link'>T-Shirt</a></li>
+            <li class="nested-parent"><a href="index.php" class="third link">Über Uns</a>
+              <ul>
+                <li><a href="index.php" class='third-one link'>Das Team</a></li>
+                <li><a href="index.php" class='third-two link'>Partner</a></li>
+              </ul>
+            </li>
+            <li><a href="blog/" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
+            <li><a href="index.php" class='fourth link'>Kontakt</a></li>
+            <!-- Paypal Donate Button -->
+            <li>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
+                <!-- <input class="donate" type="image" src="http://njagala.com/images/paypal/button.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal."> -->
+                <a id="nav-donate-btn" class="donate">Unterstützen!</a>
+                <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- important: this needs to be an id for the script to work! -->
+        <img id="burger-image" src="images/burger.png" alt="menu" />
+
+      </header>
+    </div>
+
+    <!-- Landing Page Background Image -->
+    <div class="image-container">
+      <script>$(".image-container").backstretch("images/background.jpeg");</script>
+    </div>
+
+    <div class="impressum-container container full-width">
+      <div class="col-xs-10 col-sm-6 col-xs-offset-1 col-sm-offset-3">
+        <p>
+          <h2>Impressum</h2>
+          Enactus KIT e.V.<br>
+          Adenauerring 7<br>
+          76131 Karlsruhe<br>
+          <a href="mailto:info@kit.enactus.de">info@kit.enactus.de</a><br>
+          <h3>Haftungshinweis</h3>
+          Die grafische Gestaltung, die einzelnen Elemente sowie die Inhalte dieser Internetseiten sind urheberrechtlich geschützt. Dies gilt auch für die redaktionellen Beiträge sowie deren Auswahl und Zusammenstellung. Weiterverwendung und Vervielfältigung sind nur bei ausdrücklicher schriftlicher Genehmigung gestattet.<br><br>
+          Es gilt das ausdrückliche Vorbehaltungsrecht, einzelne Elemente oder das gesamte Angebot ohne vorherige Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung einzustellen.<br><br>
+          Bei kommerzieller Verwertung gelten die gesetzlichen Copyright-Bestimmungen. Die auf den Seiten veröffentlichten Inhalte werden sorgfältig recherchiert und geprüft. Dennoch kann die Redaktion keine Gewähr und keine Haftung für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen.<br><br>
+          Die redaktionelle Verantwortung für den Inhalt der Internetseiten, auf die per Hyperlink verwiesen wird (einschließlich der dort verankerten Links zu Dritten), trägt in jeder Hinsicht der jeweilige Anbieter allein. Der Inhaber dieser Webseite ist für den Inhalt dieser Seiten nicht verantwortlich.<br><br>
+        </p>
+      </div>
+    </div>
+
+    <!-- Paypal Modal -->
+    <div class="paypal-redirect">
+      <span id="close-redirect" class="glyphicon glyphicon-remove"></span>
+      <h3>Unterstützen</h3>
+      <p>Du findest unser Projekt super und möchtest uns gerne finanziell unterstützen? Wir freuen uns über jeden Beitrag!</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="5EZJNGUJWBK88">
+        <input id="redirect-button" class="donate" type="image" src="http://njagala.com/images/paypal/button.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+
+    <!-- Burger Menu for smaller devices -->
+    <div class="burger-menu">
+      <div class="burger-menu-head">
+        <img class="burger-back-arrow" src="images/back-arrow.png">
+      </div>
+      <!-- burger menu content -->
+      <ul class="burger-nav">
+        <li><a href="index.php" class="home link">Home</a></li>
+        <li><a href="index.php" class="first link">Idee</a></li>
+        <li><a href="index.php" class='second link'>T-Shirt</a></li>
+        <li><a href="index.php" class="third link">Über Uns</a>
+          <ul>
+            <li><a href="index.php" class='third-one link'>Das Team</a></li>
+            <li><a href="index.php" class='third-two link'>Partner</a></li>
+          </ul>
+        </li>
+        <li><a href="blog/" target="_blank" class='link'>News <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></li>
+        <li><a href="index.php" class='fourth link'>Kontakt</a></li>
+      </ul>
+      <p class="copyright">© Njagala 2016</p>
+    </div>
+</body>
+</html>
