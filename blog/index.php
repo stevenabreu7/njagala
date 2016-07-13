@@ -102,8 +102,9 @@
     </div>
 
     <div class="buttons">
-      <a class="button" href="../">&larr; back to homepage</a>
-      <a class="button" href="create.php">+ create new article</a>
+      <a class="button" href="../"><span class="glyphicon glyphicon-arrow-left"></span> back to home</a>
+      <a class="button" href="login.php?link=create"><span class="glyphicon glyphicon-edit"></span> new article</a>
+      <a class="button" href="login.php?link=edit"><span class="glyphicon glyphicon-cog"></span> edit articles</a>
     </div>
     <div class="container">
   <?php

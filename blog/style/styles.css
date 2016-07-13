@@ -2,6 +2,11 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
+.glyphicon {
+	font-size: 14px;
+	margin-right: 5px;
+}
+
 .buttons {
 	text-align: center;
 }
@@ -49,13 +54,13 @@ a.button {
 	text-decoration: none;
 	background-color: #BD612B;
 	border-radius: 5px;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-right: 20px;
 	margin-left: 20px;
 	padding: 10px;
 	color: white;
 	position: relative;
-	top: 80px;
+	top: 90px;
 }
 
 @media only screen and (max-width: 610px) {
