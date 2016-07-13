@@ -144,7 +144,8 @@
       <!-- Footer -->
       <footer class="container full-width">
         <div class="col-xs-10 col-sm-8 col-lg-8 col-xs-offset-1 col-sm-offset-2">
-          <p>Beautiful clothes, handmade in Uganda.</p>
+          <p>Beautiful clothes, manufactured in Uganda.</p>
+          <p><a href="impressum.html">Impressum <span class="external-link-icon glyphicon glyphicon-new-window"></span></a></p>
           <p class="footer copyright">© Njagala 2016</p>
         </div>
       </footer>
@@ -165,11 +166,11 @@
 
 
       // Create connection - on server
-      // $conn = new mysqli($servername, $username, $password, $dbname);
+      $conn = new mysqli($servername, $username, $password, $dbname);
 
       //Create connection: locally
-      $conn = new mysqli("", "root");
-      mysqli_select_db($conn, "njagala");
+      // $conn = new mysqli("", "root");
+      // mysqli_select_db($conn, "njagala");
 
 
       // Check connection
@@ -237,7 +238,7 @@
         <h2 id="about-header">Über Uns</h2>
         <hr>
         <div class="group-picture">
-          <img src="images/enactus-group.jpg">
+          <img src="images/enactus-group.JPG">
         </div>
         <div class="row nomarg">
           <div class="njagala-logo col-xs-6 col-sm-3 col-md-3 col-xs-offset-3 col-sm-offset-1 col-lg-offset-2">
@@ -484,7 +485,7 @@
         <hr>
         <div class="pad col-xs-10 col-sm-10 col-lg-8 col-xs-offset-1 col-lg-offset-2">
           <p class="contact">
-            General inquiries: <a href="mailto:info@njagala.com">info@njagala.com</a><br>
+            Bei Fragen und Anmerkungen können Sie sich gerne an <a href="mailto:info@njagala.com">info@njagala.com</a> wenden.<br>
           </p>
         </div>
       </div>
