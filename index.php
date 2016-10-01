@@ -220,12 +220,12 @@
         <div class="pad col-xs-10 col-sm-10 col-lg-8 col-xs-offset-1 col-lg-offset-2">
           <!-- <h3 class="vision">Die Vision</h3> -->
           <p><span class="paragraph-title">Das Ziel von Njagala</span> ist es, einen nachhaltigen Wirtschafskreislauf durch die Produktion von afrikanisch-europäisch geprägter Mode in Uganda zu etablieren. Die hergestellten Kleidungsstücke sollen anschließend nach Deutschland exportiert und dort vertrieben werden. Durch den Transfer von Know-How im Bereich der Textilherstellung sowie von Devisen durch den hiesigen Vertrieb soll das Projekt in der Region einen vorbildhaften Charakter haben und langfristig Ableger-Projekte generieren.</p>
-          <p><span class="paragraph-title">Massig Bio-Baumwolle nur für Export - </span>
+          <p><span class="paragraph-title">Bio-Baumwolle nur als Exportgut - </span>
           In Uganda gibt es große Vorkommen an (Bio-)Baumwolle. Leider findet die Verarbeitung des Rohstoffes aufgrund niedrigerer Löhne und besserer Infrastruktur fast ausschließlich in Asien statt - die lokale Wirtschaft kann also kaum von diesen natürlichen Ressourcen profitieren. Das wollen wir ändern!</p>
           <p><span class="paragraph-title">Rindenstoff - </span>
           Uganda beheimatet einen auf der Welt einzigartigen Textilschatz – die Rinde des dort wachsenden Mutuba-Baums! Aus dieser kann nämlich in Handarbeit und ohne Einsatz von Chemikalien das wohl älteste Textil der Welt, der Bark-Cloth, produziert werden. Das Verfahren ist dabei so nachhaltig, dass die Bäume dabei nicht zu Schaden kommen, sondern die Rinde mehrmals pro Jahr (!) geerntet werden kann.</p>
           <p><span class="paragraph-title">Gendersituation / Armut - </span>
-          Trotz seiner politisch stabilen Lage und der reichen Natur ist Uganda nach wie vor eines der unterentwickelsten und ärmsten Länder der Welt – ein Umstand gegen den nur eine wachsende, stabile Wirtschaft und Gleichberechtigung eine Wirkung haben. Kann das Land selbst hergestellte Waren zu fairen Bedingungen exportieren, wächst die Wirtschaft – ka-tching!</p>
+          Trotz seiner politisch stabilen Lage und der reichen Natur ist Uganda nach wie vor eines der unterentwickelsten und ärmsten Länder der Welt. Über 50% der Bevölkerung haben 1,25 US-Dollar oder weniger zum täglichen Leben zur Verfügung – ein Umstand gegen den nur eine wachsende, stabile Wirtschaft und Gleichberechtigung eine Wirkung haben. Kann das Land selbst hergestellte Waren zu fairen Bedingungen exportieren, wächst die Wirtschaft – ka-tching!</p>
         </div>
       </div>
       ';
@@ -238,7 +238,7 @@
         <h2 id="about-header">Über Uns</h2>
         <hr>
         <div class="group-picture">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-interval="8000" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -276,7 +276,7 @@
         </div>
         <div class="row nomarg">
           <div class="njagala-logo col-xs-6 col-sm-3 col-md-3 col-xs-offset-3 col-sm-offset-1 col-lg-offset-2">
-            <img src="images/logo.png">
+            <img src="images/icon_white.png">
             <script>
               $(document).ready(function() {
                 if ($(window).width() > 767)

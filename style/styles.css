@@ -63,8 +63,15 @@ hr {
 	}
 }
 
-.enactus-logo img, .njagala-logo img, .hih-logo img, .uganda-logo img {
+.enactus-logo img, .hih-logo img, .uganda-logo img {
 	width: 100%;
+}
+
+.njagala-logo img {
+	max-width: 50%;
+	margin-left: 25%;
+	margin-right: 20%;
+	margin-top: 5px;
 }
 
 .njagala-box, .enactus-box, .hih-box, .uganda-box {
